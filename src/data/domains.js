@@ -1,4 +1,14 @@
 import carHeroImage from "../assets/car.jpg";
+import domain48vCarImage from "../assets/domain-48v-car.jpg";
+import domainadasCarImage from "../assets/domain-adas-car.jpg";
+import domainBodyPowerCarImage from "../assets/domain-bodypower-car.jpg";
+import domainLEDCarImage from "../assets/domain-LED-car.jpg";
+import domainChassisCarImage from "../assets/domain-chassis-car.jpg";
+import domainPowerCarImage from "../assets/domain-power-car.jpg";
+import domainThermalCarImage from "../assets/domain-thermal-car.jpg";
+import domainPowerChainCarImage from "../assets/domain-powertrain-car.jpg";
+import domainInfotainmentCarImage from "../assets/domain-infotainment-car.jpg";
+import domainLightEVCarImage from "../assets/domain-lightev-car.jpg";
 
 export const siteMeta = {
   title: "国产汽车芯片选型指南",
@@ -17,7 +27,7 @@ export const domains = [
     key: "domain-48v",
     title: "用于电动汽车&轻度混合动力汽车的48V系统",
     summary: "围绕 48V 起发一体、DC-DC 与能量回收构建轻混系统选型入口。",
-    cover: "",
+    cover: domain48vCarImage,
     coverHint: "建议放置 16:9 的 48V 系统示意图（1200x675）",
     subsystems: [
       "曲轴启动发电机 48V-逆变器 ISG",
@@ -30,7 +40,7 @@ export const domains = [
     key: "domain-adas",
     title: "高级驾驶员辅助系统 (ADAS)和自动驾驶(AD)",
     summary: "感知、域控、座舱融合的智能驾驶场景入口。",
-    cover: "",
+    cover: domainadasCarImage,
     coverHint: "建议放置 ADAS 传感器融合图（1200x675）",
     subsystems: [
       "汽车雷达系统",
@@ -46,7 +56,7 @@ export const domains = [
     key: "domain-body-power",
     title: "汽车车身电子与电力分配",
     summary: "覆盖车身控制、区域网关与整车配电链路。",
-    cover: "",
+    cover: domainBodyPowerCarImage,
     coverHint: "建议放置车身电子拓扑图（1200x675）",
     subsystems: [
       "汽车辅助系统",
@@ -63,7 +73,7 @@ export const domains = [
     key: "domain-lighting",
     title: "汽车 LED 照明系统",
     summary: "从单灯功能到矩阵大灯，覆盖内外饰照明控制。",
-    cover: "",
+    cover: domainLEDCarImage,
     coverHint: "建议放置车灯控制效果图（1200x675）",
     subsystems: [
       "汽车动画LED系统",
@@ -80,7 +90,7 @@ export const domains = [
     key: "domain-chassis",
     title: "底盘控制与安全",
     summary: "制动、转向、悬架与约束系统的高可靠方案入口。",
-    cover: "",
+    cover: domainChassisCarImage,
     coverHint: "建议放置底盘控制结构图（1200x675）",
     subsystems: [
       "主动悬架控制",
@@ -96,7 +106,7 @@ export const domains = [
     key: "domain-nev-powertrain",
     title: "新能源汽车动力系统",
     summary: "电池、逆变、车载充电和燃料电池传动一体化。",
-    cover: "",
+    cover: domainPowerCarImage,
     coverHint: "建议放置新能源动力链路图（1200x675）",
     subsystems: [
       "汽车电池管理系统",
@@ -111,7 +121,7 @@ export const domains = [
     key: "domain-thermal",
     title: "电动汽车热管理",
     summary: "通过压缩机、PTC 与 HVAC 协同提升整车热效率。",
-    cover: "",
+    cover: domainThermalCarImage,
     coverHint: "建议放置热管理回路图（1200x675）",
     subsystems: [
       "汽车高压电动压缩机",
@@ -126,7 +136,7 @@ export const domains = [
     key: "domain-powertrain",
     title: "动力总成系统",
     summary: "发动机与传动系统协同控制的核心链路。",
-    cover: "",
+    cover: domainPowerChainCarImage,
     coverHint: "建议放置动力总成示意图（1200x675）",
     subsystems: ["发动机控制单元", "变速箱控制器", "动力总成能量管理模块"],
     functions: ["Engine Control", "Shift Strategy", "Powertrain Coordination"]
@@ -135,7 +145,7 @@ export const domains = [
     key: "domain-infotainment",
     title: "车载信息娱乐系统和人机界面",
     summary: "多屏交互、语音交互与车载连接融合体验。",
-    cover: "",
+    cover: domainInfotainmentCarImage,
     coverHint: "建议放置座舱交互界面图（1200x675）",
     subsystems: ["座舱域控制器", "多媒体主机", "语音与触控交互单元", "车载连接模块"],
     functions: ["Multi-screen HMI", "Voice Interaction", "In-vehicle Connectivity"]
@@ -144,7 +154,7 @@ export const domains = [
     key: "domain-light-ev",
     title: "轻型电动车解决方案",
     summary: "适配两轮/三轮平台的电驱、充电与照明控制场景。",
-    cover: "",
+    cover: domainLightEVCarImage,
     coverHint: "建议放置轻型电动车整车图（1200x675）",
     subsystems: ["轻型电驱控制器", "电池与充电管理", "照明驱动与通信", "车身控制单元"],
     functions: ["Light EV Drive", "Low-voltage BMS", "Lighting Communication"]

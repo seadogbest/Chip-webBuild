@@ -15,10 +15,9 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
           <span class="badge soft">System Domain Driven</span>
           <h1>{{ siteMeta.title }}</h1>
           <p>
-            以整车系统为主线，将半导体能力映射到具体应用场景，缩短“需求 → 方案 → 器件”的选型路径。
+            以整车系统为主线，展示国产芯片在具体功能模块的选型情况。
           </p>
           <div class="hero-actions">
-            <RouterLink class="btn primary" :to="`/domain/${domains[0].key}`">进入示例 Domain</RouterLink>
             <a class="btn ghost" href="https://www.infineon.cn/applications/automotive" target="_blank" rel="noreferrer">
               参考页面样式
             </a>
@@ -32,17 +31,17 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
         <article class="metric-card">
           <div class="metric-title">System Domain</div>
           <div class="metric-value">{{ domains.length }}</div>
-          <div class="metric-sub">第一层系统级分类</div>
+          <div class="metric-sub">第一层：系统级分类</div>
         </article>
         <article class="metric-card">
           <div class="metric-title">Subsystem</div>
           <div class="metric-value">{{ subsystemTotal }}</div>
-          <div class="metric-sub">第二层子系统条目</div>
+          <div class="metric-sub">第二层：子系统条目</div>
         </article>
         <article class="metric-card">
           <div class="metric-title">Function</div>
           <div class="metric-value">{{ functionTotal }}</div>
-          <div class="metric-sub">第三层功能模块映射</div>
+          <div class="metric-sub">第三层：功能模块映射</div>
         </article>
       </div>
     </section>
@@ -50,7 +49,7 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
     <section class="panel section-block">
       <div class="section-head">
         <h2>第一层：系统级分类（Domain Level）</h2>
-        <p>点击任意 Domain 卡片，将跳转到新页面展示对应第二层 Subsystem 内容。</p>
+        <p>点击查看子系统</p>
       </div>
       <div class="domain-grid">
         <article v-for="domain in domains" :key="domain.key" class="domain-card">
@@ -65,7 +64,7 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
           <p>{{ domain.summary }}</p>
           <div class="card-foot">
             <span class="badge">{{ domain.subsystems.length }} 个子系统</span>
-            <RouterLink class="btn ghost" :to="`/domain/${domain.key}`">查看 Subsystem</RouterLink>
+            <RouterLink class="btn ghost" :to="`/domain/${domain.key}`">查看子系统</RouterLink>
           </div>
         </article>
       </div>
@@ -190,19 +189,20 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
   overflow: hidden;
   border: 1px solid #bfdbfe;
   background: #f8fbff;
-  min-height: 140px;
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 .domain-image {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 140px;
   object-fit: cover;
 }
 
 .image-placeholder {
-  min-height: 140px;
+  width: 100%;
+  height: 100%;
   padding: 14px;
   display: flex;
   flex-direction: column;
