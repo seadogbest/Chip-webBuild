@@ -1,11 +1,12 @@
 <script setup>
-import { computed, ref, watch } from "vue";
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 import { domains } from "../data/domains";
-import diagram48vImage from "../assets/SVG-demo.png";
+import diagram48vSvg from "../assets/Slide 16_9 - 1.svg?raw";
 
 const route = useRoute();
 const selectedSubsystem = ref("");
+const selectedSubsystemDetail = ref("");
 const colorPalettes = [
   ["#0ea5e9", "#2563eb", "#1e40af"],
   ["#14b8a6", "#0d9488", "#0f766e"],
@@ -17,7 +18,19 @@ const colorPalettes = [
 
 const activeDomain = computed(() => domains.find((item) => item.key === route.params.domainKey));
 const validDomain = computed(() => Boolean(activeDomain.value));
-const is48VDomain = computed(() => activeDomain.value?.key === "domain-48v");
+const selectedSubsystemOptions = computed(() => {
+  if (!activeDomain.value || !selectedSubsystem.value) {
+    return [];
+  }
+  return activeDomain.value.subsystemDetails?.[selectedSubsystem.value] ?? [];
+});
+const selectedSubsystemDisplay = computed(() => selectedSubsystemDetail.value || selectedSubsystem.value);
+const shouldShowBodyPower48vDiagram = computed(
+  () =>
+    activeDomain.value?.key === "domain-body-power" &&
+    selectedSubsystem.value === "汽车辅助系统" &&
+    selectedSubsystemDetail.value === "汽车48V辅助电机驱动"
+);
 const selectedSubsystemIndex = computed(() => {
   if (!activeDomain.value) {
     return 0;
@@ -29,7 +42,15 @@ const selectedSubsystemCover = computed(() => {
   if (!activeDomain.value) {
     return "";
   }
-  return buildSubsystemCover(selectedSubsystem.value, activeDomain.value.title, selectedSubsystemIndex.value);
+  return buildSubsystemCover(selectedSubsystemDisplay.value, activeDomain.value.title, selectedSubsystemIndex.value);
+});
+const selectedSolutionProvider = computed(() => {
+  if (!activeDomain.value) {
+    return null;
+  }
+  const providerKey = selectedSubsystemDetail.value || selectedSubsystem.value;
+  const provider = activeDomain.value.solutionProviders?.[providerKey];
+  return provider ?? null;
 });
 const diagramNodes = [
   {
@@ -202,24 +223,94 @@ const diagramNodes = [
 const selectedChipNodeId = ref(diagramNodes[0].id);
 const selectedChipNode = computed(() => diagramNodes.find((node) => node.id === selectedChipNodeId.value) ?? diagramNodes[0]);
 const selectedNodeChips = computed(() => selectedChipNode.value?.chips ?? []);
+const diagramSvgContainer = ref(null);
+const diagramHotspotSelectorMap = [
+  {
+    id: "pmic",
+    label: "电源管理芯片",
+    selectors: ['rect[x="69.5"][y="107.5"]']
+  },
+  {
+    id: "mcu",
+    label: "MCU",
+    selectors: ['rect[x="69"][y="216"]']
+  },
+  {
+    id: "boost",
+    label: "升压变换器",
+    selectors: ['rect[x="467.5"][y="12.5"]']
+  },
+  {
+    id: "voltage-follower",
+    label: "电压跟随器",
+    selectors: ['path[d^="M256 237.5C"]', 'path[d^="M256 346.5C"]']
+  },
+  {
+    id: "gate-driver",
+    label: "隔离式栅极驱动",
+    selectors: ['rect[x="310.5"][y="232.5"]', 'rect[x="310.5"][y="338.5"]']
+  },
+  {
+    id: "opamp",
+    label: "单CMOS运算放大器",
+    selectors: ['rect[x="310.5"][y="419.5"]']
+  },
+  {
+    id: "iso-vsense",
+    label: "隔离电压采样放大器",
+    selectors: ['rect[x="454.5"][y="479.5"]']
+  },
+  {
+    id: "power-module",
+    label: "功率模块",
+    selectors: ['rect[x="469.5"][y="209.5"]']
+  },
+  {
+    id: "current-sensor",
+    label: "电流传感器",
+    selectors: ['circle[cx="730.5"][cy="311.5"]']
+  }
+];
 
 watch(
   activeDomain,
   (domain) => {
     if (!domain) {
       selectedSubsystem.value = "";
+      selectedSubsystemDetail.value = "";
       return;
     }
-    selectedSubsystem.value = domain.subsystems[0] ?? "";
-    if (domain.key === "domain-48v") {
-      selectedChipNodeId.value = diagramNodes[0].id;
-    }
+    const firstSubsystem = domain.subsystems[0] ?? "";
+    selectedSubsystem.value = firstSubsystem;
+    selectedSubsystemDetail.value = getDefaultSubsystemDetail(domain, firstSubsystem);
   },
   { immediate: true }
 );
 
+watch(shouldShowBodyPower48vDiagram, (shouldShow) => {
+  if (shouldShow) {
+    selectedChipNodeId.value = diagramNodes[0].id;
+    nextTick(() => {
+      setupSvgHotspots();
+    });
+  }
+});
+
 function chooseSubsystem(subsystem) {
   selectedSubsystem.value = subsystem;
+  selectedSubsystemDetail.value = getDefaultSubsystemDetail(activeDomain.value, subsystem);
+}
+
+function chooseSubsystemDetail(detail) {
+  selectedSubsystemDetail.value = detail;
+}
+
+function getDefaultSubsystemDetail(domain, subsystem) {
+  if (!domain || !subsystem) {
+    return "";
+  }
+  const options = domain.subsystemDetails?.[subsystem] ?? [];
+  return options[0] ?? "";
 }
 
 function buildSubsystemCover(subsystemTitle, domainTitle, index) {
@@ -251,6 +342,82 @@ function chooseChipNode(nodeId) {
   selectedChipNodeId.value = nodeId;
 }
 
+function setupSvgHotspots() {
+  const container = diagramSvgContainer.value;
+  if (!container) {
+    return;
+  }
+  const svgRoot = container.querySelector("svg");
+  if (!svgRoot) {
+    return;
+  }
+  svgRoot.classList.add("diagram-svg");
+  const hotspotSet = new Set();
+  for (const config of diagramHotspotSelectorMap) {
+    for (const selector of config.selectors) {
+      const nodes = svgRoot.querySelectorAll(selector);
+      for (const node of nodes) {
+        hotspotSet.add(node);
+        node.classList.add("diagram-hotspot");
+        node.dataset.nodeId = config.id;
+        node.setAttribute("role", "button");
+        node.setAttribute("tabindex", "0");
+        node.setAttribute("aria-label", `查看 ${config.label} 可选芯片`);
+      }
+    }
+  }
+  for (const node of svgRoot.querySelectorAll(".diagram-hotspot")) {
+    if (!hotspotSet.has(node)) {
+      node.classList.remove("diagram-hotspot");
+      node.removeAttribute("data-node-id");
+      node.removeAttribute("role");
+      node.removeAttribute("tabindex");
+      node.removeAttribute("aria-label");
+    }
+  }
+}
+
+function handleSvgClick(event) {
+  const target = event.target.closest(".diagram-hotspot");
+  if (!target) {
+    return;
+  }
+  chooseChipNode(target.dataset.nodeId);
+}
+
+function handleSvgKeyboard(event) {
+  if (event.key !== "Enter" && event.key !== " ") {
+    return;
+  }
+  const target = event.target.closest(".diagram-hotspot");
+  if (!target) {
+    return;
+  }
+  event.preventDefault();
+  chooseChipNode(target.dataset.nodeId);
+}
+
+onMounted(() => {
+  if (!shouldShowBodyPower48vDiagram.value) {
+    return;
+  }
+  setupSvgHotspots();
+});
+
+onBeforeUnmount(() => {
+  const container = diagramSvgContainer.value;
+  if (!container) {
+    return;
+  }
+  container.querySelectorAll(".diagram-hotspot").forEach((hotspot) => {
+    hotspot.classList.remove("diagram-hotspot");
+    hotspot.removeAttribute("data-node-id");
+    hotspot.removeAttribute("role");
+    hotspot.removeAttribute("tabindex");
+    hotspot.removeAttribute("aria-label");
+  });
+});
+
 function getSourceDomain(url) {
   if (!url) {
     return "";
@@ -275,24 +442,19 @@ function getSourceDomain(url) {
         <RouterLink to="/" class="btn ghost">返回 Domain 首页</RouterLink>
       </div>
 
-      <div v-if="!is48VDomain" class="domain-cover">
+      <div v-if="!shouldShowBodyPower48vDiagram" class="domain-cover">
         <img :src="selectedSubsystemCover" :alt="selectedSubsystem" class="cover-image" />
-        <div class="cover-caption">{{ selectedSubsystem }}</div>
+        <div class="cover-caption">{{ selectedSubsystemDisplay }}</div>
       </div>
       <section v-else class="diagram-panel">
-        <div class="diagram-canvas">
-          <img :src="diagram48vImage" alt="48V mild hybrid energy flow diagram" class="diagram-image" />
-          <button
-            v-for="node in diagramNodes"
-            :key="node.id"
-            class="diagram-node"
-            :class="{ active: selectedChipNodeId === node.id }"
-            :style="{ left: `${node.x}%`, top: `${node.y}%`, width: `${node.w}%`, height: `${node.h}%` }"
-            :title="`查看 ${node.label} 可选芯片`"
-            @click="chooseChipNode(node.id)"
-          >
-            <span>{{ node.label }}</span>
-          </button>
+        <div
+          ref="diagramSvgContainer"
+          class="diagram-canvas diagram-svg-container"
+          aria-label="48V 轻混系统框图"
+          v-html="diagram48vSvg"
+          @click="handleSvgClick"
+          @keydown="handleSvgKeyboard"
+        >
         </div>
         <aside class="chip-side-panel">
           <h2>{{ selectedChipNode.label }} 可选芯片</h2>
@@ -334,17 +496,47 @@ function getSourceDomain(url) {
         <article class="subsystem-detail">
           <h2>子系统详情</h2>
           <p>{{ selectedSubsystem }}</p>
-          <div class="mapping-flow">
-            <span class="tag">整车域</span>
-            <span class="tag">子系统</span>
-            <span class="tag">功能模块</span>
-            <span class="tag">芯片</span>
-          </div>
-          <div class="function-box">
-            <h3>对应功能模块（Function Level）</h3>
-            <div class="tag-row">
-              <span v-for="func in activeDomain?.functions" :key="func" class="tag">{{ func }}</span>
+          <div v-if="selectedSubsystemOptions.length" class="detail-selector">
+            <h3>可选详情</h3>
+            <div class="detail-options">
+              <button
+                v-for="detail in selectedSubsystemOptions"
+                :key="detail"
+                class="subsystem-item detail-option"
+                :class="{ active: detail === selectedSubsystemDetail }"
+                @click="chooseSubsystemDetail(detail)"
+              >
+                {{ detail }}
+              </button>
             </div>
+          </div>
+          <p v-if="selectedSubsystemDetail" class="detail-current">当前详情：{{ selectedSubsystemDetail }}</p>
+          <p v-else class="detail-empty">该子系统暂无对应的详情选项。</p>
+          <div class="provider-block">
+            <h3>设计方案提供单位：</h3>
+            <a
+              v-if="selectedSolutionProvider?.name && selectedSolutionProvider?.url"
+              class="provider-card clickable"
+              :href="selectedSolutionProvider.url"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <span class="provider-main">
+                <span class="provider-label">承办企业</span>
+                <span class="provider-name">{{ selectedSolutionProvider.name }}</span>
+              </span>
+              <span class="provider-url-hint" aria-label="企业官网链接">
+                <span>{{ getSourceDomain(selectedSolutionProvider.url) }}</span>
+                <span class="external-icon" aria-hidden="true">↗</span>
+              </span>
+            </a>
+            <div v-else-if="selectedSolutionProvider?.name" class="provider-card">
+              <span class="provider-main">
+                <span class="provider-label">承办企业</span>
+                <span class="provider-name">{{ selectedSolutionProvider.name }}</span>
+              </span>
+            </div>
+            <div v-else class="provider-card empty"></div>
           </div>
         </article>
       </div>
@@ -445,39 +637,30 @@ function getSourceDomain(url) {
   overflow: hidden;
 }
 
-.diagram-image {
+.diagram-svg-container :deep(.diagram-svg) {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.diagram-node {
-  position: absolute;
-  border: 1px solid rgba(22, 163, 74, 0.62);
-  background: rgba(34, 197, 94, 0.16);
-  color: #166534;
-  border-radius: 10px;
+.diagram-svg-container :deep(.diagram-hotspot) {
   cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 11px;
-  transition: 0.2s ease;
+  fill: #eff6ff;
+  stroke: #0284c7;
+  stroke-width: 1.6;
+  transition: fill 0.2s ease, stroke 0.2s ease, opacity 0.2s ease;
 }
 
-.diagram-node span {
-  padding: 2px 4px;
-  line-height: 1.25;
-  background: rgba(255, 255, 255, 0.65);
-  border-radius: 6px;
+.diagram-svg-container :deep(.diagram-hotspot:hover) {
+  fill: #dbeafe;
+  stroke: #0369a1;
 }
 
-.diagram-node:hover,
-.diagram-node.active {
-  border-color: #15803d;
-  background: rgba(34, 197, 94, 0.28);
+.diagram-svg-container :deep(.diagram-hotspot:focus-visible) {
+  fill: #bfdbfe;
+  stroke: #0c4a6e;
+  stroke-width: 2;
+  outline: none;
 }
 
 .chip-side-panel {
@@ -600,30 +783,106 @@ function getSourceDomain(url) {
   color: #334155;
 }
 
-.mapping-flow,
-.tag-row {
-  margin-top: 12px;
+.detail-selector {
+  margin-top: 10px;
+}
+
+.detail-selector h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.detail-options {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.function-box {
+.detail-option {
+  width: auto;
+}
+
+.detail-current,
+.detail-empty {
   margin-top: 10px;
+  font-size: 13px;
+  color: #475569;
 }
 
-.function-box h3 {
-  margin: 0;
-  font-size: 16px;
+.provider-block {
+  margin-top: 12px;
 }
 
-.tag {
-  padding: 4px 10px;
-  border-radius: 999px;
+.provider-block h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+.provider-card {
+  display: block;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   border: 1px solid #bfdbfe;
-  background: #eff6ff;
-  color: #1e40af;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #eff6ff 0%, #f8fbff 100%);
+  color: #1e293b;
+  text-decoration: none;
+  padding: 10px 12px;
+  transition: 0.2s ease;
+}
+
+.provider-card.clickable:hover {
+  background: linear-gradient(90deg, #dbeafe 0%, #eff6ff 100%);
+  border-color: #60a5fa;
+}
+
+.provider-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.provider-label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 2px 10px;
   font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.provider-name {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.provider-url-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  border-radius: 999px;
+  background: #f0f9ff;
+  padding: 2px 10px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.provider-card.empty {
+  min-height: 42px;
+  background: #f8fafc;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  border-left-color: #cbd5e1;
 }
 
 .empty-state {
