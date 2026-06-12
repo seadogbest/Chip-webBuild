@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import DomainHomePage from "../pages/DomainHomePage.vue";
 import DomainDetailPage from "../pages/DomainDetailPage.vue";
+import ChipCategoryPage from "../pages/ChipCategoryPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: "/domain/:domainKey",
       name: "domain-detail",
       component: DomainDetailPage
+    },
+    {
+      path: "/chip-category/:categoryKey",
+      name: "chip-category",
+      component: ChipCategoryPage
     }
   ]
 });

@@ -2,9 +2,11 @@
 import { computed } from "vue";
 import { RouterLink } from "vue-router";
 import { domains, homepageImage, siteMeta } from "../data/domains";
+import { getChipCategoryStats } from "../data/chips";
 
 const subsystemTotal = computed(() => domains.reduce((total, domain) => total + domain.subsystems.length, 0));
 const functionTotal = computed(() => domains.reduce((total, domain) => total + domain.functions.length, 0));
+const chipCategories = computed(() => getChipCategoryStats());
 </script>
 
 <template>
@@ -67,6 +69,32 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
             <RouterLink class="btn ghost" :to="`/domain/${domain.key}`">查看子系统</RouterLink>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="panel section-block">
+      <div class="section-head">
+        <h2>第二部分：芯片功能分类</h2>
+      </div>
+      <div class="chip-category-list">
+        <RouterLink
+          v-for="(category, index) in chipCategories"
+          :key="category.key"
+          class="chip-category-row"
+          :to="`/chip-category/${category.key}`"
+        >
+          <div class="chip-category-main">
+            <div class="chip-category-index">{{ String(index + 1).padStart(2, "0") }}</div>
+            <div>
+              <h3>{{ category.title }}</h3>
+              <p>{{ category.summary }}</p>
+            </div>
+          </div>
+          <div class="chip-category-meta">
+            <span class="badge">{{ category.secondaryCategoryCount }} 个二级分类</span>
+            <span class="badge">{{ category.chipCount }} 个芯片</span>
+          </div>
+        </RouterLink>
       </div>
     </section>
   </main>
@@ -240,6 +268,67 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
   color: #1d4ed8;
 }
 
+.chip-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chip-category-row {
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 16px;
+  background: linear-gradient(90deg, #ffffff 0%, #f8fbff 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
+.chip-category-row:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+.chip-category-main {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.chip-category-index {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.chip-category-main h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.chip-category-main p {
+  margin: 6px 0 0;
+  color: #475569;
+}
+
+.chip-category-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -257,6 +346,16 @@ const functionTotal = computed(() => domains.reduce((total, domain) => total + d
 
   .hero-text h1 {
     font-size: 28px;
+  }
+
+  .chip-category-row,
+  .chip-category-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chip-category-meta {
+    justify-content: flex-start;
   }
 }
 </style>
