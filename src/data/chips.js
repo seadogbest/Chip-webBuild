@@ -1,3 +1,5 @@
+import { chipRecords } from "./chip-records.generated";
+
 export const chipFunctionCategories = [
   {
     key: "power",
@@ -36,10 +38,6 @@ export const chipFunctionCategories = [
   }
 ];
 
-// 预留给 Excel 导入后的芯片数据库记录。
-// 字段设计对应 README 中描述的 6 列信息。
-export const chipRecords = [];
-
 const categoryLookup = new Map(
   chipFunctionCategories.flatMap((category) => [
     [category.key, category.key],
@@ -56,14 +54,22 @@ export function getChipCategoryStats() {
     const categoryRecords = chipRecords.filter(
       (record) => resolveChipCategoryKey(record.primaryCategory) === category.key
     );
+    const datasheetCount = categoryRecords.filter((record) => Boolean(record.datasheetUrl)).length;
     const secondaryCategoryCount = new Set(
       categoryRecords.map((record) => record.secondaryCategory).filter(Boolean)
+    ).size;
+    const manufacturerCount = new Set(
+      categoryRecords.map((record) => record.manufacturer).filter(Boolean)
     ).size;
 
     return {
       ...category,
       chipCount: categoryRecords.length,
-      secondaryCategoryCount
+      secondaryCategoryCount,
+      manufacturerCount,
+      datasheetCount,
+      pendingCount: Math.max(0, categoryRecords.length - datasheetCount),
+      completionRate: categoryRecords.length ? Math.round((datasheetCount / categoryRecords.length) * 100) : 0
     };
   });
 }

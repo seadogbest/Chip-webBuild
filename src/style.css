@@ -3,7 +3,7 @@
   line-height: 1.6;
   font-weight: 400;
   color: #0f172a;
-  background-color: #f5f8ff;
+  background-color: #eef4ff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,10 @@
 
 body {
   margin: 0;
-  background: #f5f8ff;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 22%),
+    radial-gradient(circle at top right, rgba(45, 212, 191, 0.08), transparent 18%),
+    linear-gradient(180deg, #f3f7ff 0%, #eef4ff 100%);
 }
 
 button,
@@ -28,19 +31,23 @@ textarea {
 .page {
   min-height: 100vh;
   color: #0f172a;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(96, 165, 250, 0.08), transparent 26%),
+    radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.06), transparent 24%);
 }
 
 .container {
-  width: min(1200px, 92%);
+  width: min(1360px, 94%);
   margin: 0 auto;
 }
 
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #dbeafe;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(191, 219, 254, 0.9);
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: blur(14px);
 }
 
 .header-inner {
@@ -48,7 +55,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 0;
+  padding: 18px 0 16px;
 }
 
 .brand {
@@ -58,15 +65,16 @@ textarea {
 }
 
 .brand-mark {
-  width: 28px;
-  height: 28px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8 70%);
+  border-radius: 10px;
   display: inline-block;
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.24);
 }
 
 .brand-text {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -81,7 +89,111 @@ textarea {
 }
 
 .main-content {
-  padding: 24px 0 40px;
+  padding: 28px 0 44px;
+}
+
+.site-footer {
+  margin-top: 14px;
+  padding: 0 0 32px;
+}
+
+.footer-inner {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #172554 50%, #1e293b 100%);
+  border: 1px solid rgba(191, 219, 254, 0.16);
+  border-radius: 24px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.2);
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 8px;
+}
+
+.footer-logo-image {
+  display: block;
+  width: min(360px, 100%);
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.22);
+}
+
+.footer-content {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.8fr);
+  gap: 18px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #e2e8f0;
+  padding: 4px 0;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-text {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.footer-link {
+  font-size: 15px;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-map-card {
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  background:
+    linear-gradient(135deg, rgba(239, 246, 255, 0.12) 0%, rgba(191, 219, 254, 0.08) 100%);
+  border: 1px solid rgba(191, 219, 254, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 160px;
+}
+
+.footer-map-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.footer-map-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-map-text {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 14px;
 }
 
 .panel {
@@ -89,7 +201,7 @@ textarea {
   border: 1px solid #dbeafe;
   border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.07);
 }
 
 .panel-title h1 {
@@ -361,6 +473,20 @@ textarea {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo-image {
+    width: min(100%, 320px);
   }
 
   .header-actions {
