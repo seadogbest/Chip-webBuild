@@ -1618,5 +1618,671 @@ export const chipRecords = [
     "secondaryCategory": "FPGA芯片",
     "datasheetUrl": "https://cdn.gowinsemi.com.cn/DS173-1.7_GW1N%E7%B3%BB%E5%88%97FPGA%E4%BA%A7%E5%93%81(%E8%BD%A6%E8%A7%84%E7%BA%A7)%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C.pdf",
     "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1021qt-1-181",
+    "model": "SIT1021QT/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/show-67-166-1.html#filedown",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1021qtk-1-182",
+    "model": "SIT1021QTK/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/show-67-166-1.html#filedown",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1021gqtk-183",
+    "model": "SIT1021GQTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/show-67-342-1.html#filedown",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1021gqt-184",
+    "model": "SIT1021GQT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/show-67-342-1.html#filedown",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044qt-1-185",
+    "model": "SIT1044QT/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044qtk-1-186",
+    "model": "SIT1044QTK/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044qt-31-187",
+    "model": "SIT1044QT/31",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044qtk-31-188",
+    "model": "SIT1044QTK/31",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044gqt-189",
+    "model": "SIT1044GQT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044gqtk-190",
+    "model": "SIT1044GQTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044gqt-3-191",
+    "model": "SIT1044GQT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1044gqtk-3-192",
+    "model": "SIT1044GQTK/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042aqt-1-193",
+    "model": "SIT1042AQT/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042aqt-31-194",
+    "model": "SIT1042AQT/31",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042aqtk-1-195",
+    "model": "SIT1042AQTK/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042aqtk-31-196",
+    "model": "SIT1042AQTK/31",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042gqt-197",
+    "model": "SIT1042GQT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042gqt-3-198",
+    "model": "SIT1042GQT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042gqtk-199",
+    "model": "SIT1042GQTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1042gqtk-3-200",
+    "model": "SIT1042GQTK/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1043qt-1-201",
+    "model": "SIT1043QT/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-119-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1043qtk-1-202",
+    "model": "SIT1043QTK/1",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-119-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1043gqt-203",
+    "model": "SIT1043GQT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-353-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1043gqtk-204",
+    "model": "SIT1043GQTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-353-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1145aqt-1-fd-205",
+    "model": "SIT1145AQT/1/FD",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-118-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1145aqtk-1-fd-206",
+    "model": "SIT1145AQTK/1/FD",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-118-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1145gqt-fd-207",
+    "model": "SIT1145GQT/FD",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-358-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1145gqtk-fd-208",
+    "model": "SIT1145GQTK/FD",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-358-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028qt-1-5v0-209",
+    "model": "SIT1028QT/1/5V0",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028qt-1-3v3-210",
+    "model": "SIT1028QT/1/3V3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028qtk-1-5v0-211",
+    "model": "SIT1028QTK/1/5V0",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028qtk-1-3v3-212",
+    "model": "SIT1028QTK/1/3V3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028gqt-5v0-213",
+    "model": "SIT1028GQT/5V0",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028gqt-3v3-214",
+    "model": "SIT1028GQT/3V3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028gqtk-5v0-215",
+    "model": "SIT1028GQTK/5V0",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-lin-sit1028gqtk-3v3-216",
+    "model": "SIT1028GQTK/3V3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1051gqt-217",
+    "model": "SIT1051GQT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1051gqt-3-218",
+    "model": "SIT1051GQT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1051gqtk-219",
+    "model": "SIT1051GQTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1051gqtk-3-220",
+    "model": "SIT1051GQTK/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1057gqt-3-221",
+    "model": "SIT1057GQT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1057gqt-3-222",
+    "model": "SIT1057GQT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1057gqtk-3-223",
+    "model": "SIT1057GQTK/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1462qt-3-224",
+    "model": "SIT1462QT/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1462qt-225",
+    "model": "SIT1462QT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1462qtk-3-226",
+    "model": "SIT1462QTK/3",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1462qtk-227",
+    "model": "SIT1462QTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1463qt-228",
+    "model": "SIT1463QT",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=274",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-can-sit1463qtk-229",
+    "model": "SIT1463QTK",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "CAN",
+    "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=274",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-hcld801l-230",
+    "model": "HCLD801L",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cqEPhQ0br1OL",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-hcld801a-231",
+    "model": "HCLD801A",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cakexRZ6zqIf",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8684-232",
+    "model": "CLD8684",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cn7FylAVsLwx",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8424ra-233",
+    "model": "CLD8424RA",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cpYFoIeSBMAp",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8424r-234",
+    "model": "CLD8424R",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cpYFoIeSBMAp",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8422l-235",
+    "model": "CLD8422L",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cldqqH5mCcSI",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8421l-236",
+    "model": "CLD8421L",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cgkdfWZTB88P",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld801s-237",
+    "model": "CLD801S",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cpnukk0VYPai",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld801-238",
+    "model": "CLD801",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/ciaPmXHwhqUD",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cla54x1x-239",
+    "model": "CLA54x1x系列",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cizJj9MoZ5Ra",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8424la-240",
+    "model": "CLD8424LA",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/chjp7gdMyFyb",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8424l-241",
+    "model": "CLD8424L",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cq8sFGtQhjQ9",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8424lc-242",
+    "model": "CLD8424LC",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cjRftApaj8N5",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8422lc-243",
+    "model": "CLD8422LC",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cdgLS5zllFXj",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-cld8421lc-244",
+    "model": "CLD8421LC",
+    "manufacturer": "芯聆半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "datasheetUrl": "https://www.kdocs.cn/l/cvyOgwqN9Bvf",
+    "datasheetNote": ""
+  },
+  {
+    "id": "chip-chip-ox08d10-245",
+    "model": "OX08D10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX08D10.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox03g10-246",
+    "model": "OX03G10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "本地PDF缺失: OX03G10.pdf"
+  },
+  {
+    "id": "chip-chip-ox08d20-247",
+    "model": "OX08D20",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX08D20.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox05d10-248",
+    "model": "OX05D10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX05D10.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox05c1s-249",
+    "model": "OX05C1S",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX05C1S.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox03h10-250",
+    "model": "OX03H10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX03H10.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox03j10-251",
+    "model": "OX03J10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX03J10.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox03c10-252",
+    "model": "OX03C10",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX03C10.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox02c1s-253",
+    "model": "OX02C1S",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX02C1S.pdf",
+    "datasheetNote": "本地PDF"
+  },
+  {
+    "id": "chip-chip-ox01h1b-254",
+    "model": "OX01H1B",
+    "manufacturer": "豪威集团",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "图像传感器芯片",
+    "datasheetUrl": "/data/chip_pdf/OX01H1B.pdf",
+    "datasheetNote": "本地PDF"
   }
 ];

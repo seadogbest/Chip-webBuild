@@ -92,10 +92,19 @@ def slugify(value: str) -> str:
     return normalized.strip("-") or "chip"
 
 
-def normalize_datasheet(raw_value: str) -> Tuple[str, str]:
+def normalize_datasheet(raw_value: str, model: str = "") -> Tuple[str, str]:
     cleaned = raw_value.strip()
     if re.match(r"^https?://", cleaned, re.IGNORECASE):
         return cleaned, ""
+    # 检查是否为本地 PDF 模式（Excel 中备注包含"本地"）
+    is_local = "本地" in cleaned
+    if is_local and model:
+        pdf_filename = f"{model}.pdf"
+        pdf_path = ROOT_DIR / "src" / "data" / "chip_pdf" / pdf_filename
+        if pdf_path.exists():
+            return f"/data/chip_pdf/{pdf_filename}", "本地PDF"
+        else:
+            return "", f"本地PDF缺失: {pdf_filename}"
     if cleaned:
         return "", "待芯片原厂补充"
     return "", "待芯片原厂补充"
@@ -109,7 +118,7 @@ def build_records(rows: List[List[str]]) -> List[Dict[str, str]]:
         if not any([model, manufacturer, primary_category, secondary_category, datasheet]):
             continue
 
-        datasheet_url, datasheet_note = normalize_datasheet(datasheet)
+        datasheet_url, datasheet_note = normalize_datasheet(datasheet, model)
         record = {
             "id": f"{slugify(primary_category)}-{slugify(secondary_category)}-{slugify(model)}-{index}",
             "model": model,

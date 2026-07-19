@@ -80,9 +80,16 @@ const groupedRecords = computed(() => {
   });
 });
 
+function isLocalDatasheet(url) {
+  return url?.startsWith("/data/chip_pdf/");
+}
+
 function getSourceDomain(url) {
   if (!url) {
     return "";
+  }
+  if (isLocalDatasheet(url)) {
+    return "本地PDF";
   }
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -243,10 +250,6 @@ watch(filteredRecords, () => {
                   <dd>{{ record.manufacturer || "-" }}</dd>
                 </div>
                 <div>
-                  <dt>DataSheet 状态</dt>
-                  <dd>{{ record.datasheetUrl ? "可点击查看" : getDatasheetHint(record) }}</dd>
-                </div>
-                <div>
                   <dt>一级分类</dt>
                   <dd>{{ activeCategory.title }}</dd>
                 </div>
@@ -255,8 +258,8 @@ watch(filteredRecords, () => {
                   <dd>{{ record.datasheetUrl ? getSourceDomain(record.datasheetUrl) : getDatasheetHint(record) }}</dd>
                 </div>
               </dl>
-              <div v-if="record.datasheetUrl" class="datasheet-link">
-                <span>查看 Datasheet</span>
+              <div v-if="record.datasheetUrl" class="datasheet-link" :class="{ local: isLocalDatasheet(record.datasheetUrl) }">
+                <span>{{ isLocalDatasheet(record.datasheetUrl) ? '查看本地 PDF' : '查看 Datasheet' }}</span>
                 <span>{{ getSourceDomain(record.datasheetUrl) }}</span>
               </div>
               <div v-else class="datasheet-link disabled">
@@ -629,11 +632,17 @@ watch(filteredRecords, () => {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  border: 1px solid #bae6fd;
+  border: 1px solid #c7d2fe;
   border-radius: 10px;
   padding: 10px 12px;
-  background: #f0f9ff;
-  color: #0369a1;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.datasheet-link.local {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
 }
 
 .datasheet-link.disabled {
