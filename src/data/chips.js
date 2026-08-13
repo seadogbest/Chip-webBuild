@@ -45,8 +45,21 @@ const categoryLookup = new Map(
   ])
 );
 
+function normalizeCategoryName(value) {
+  return (value || "").replace(/[/\s]+/g, "");
+}
+
 export function resolveChipCategoryKey(value) {
-  return categoryLookup.get(value) ?? "";
+  if (!value) return "";
+  const direct = categoryLookup.get(value);
+  if (direct) return direct;
+  const normalizedInput = normalizeCategoryName(value);
+  for (const category of chipFunctionCategories) {
+    if (normalizedInput === normalizeCategoryName(category.title)) {
+      return category.key;
+    }
+  }
+  return "";
 }
 
 export function getChipCategoryStats() {

@@ -241,6 +241,7 @@ watch(filteredRecords, () => {
                 <div>
                   <div class="record-label">芯片型号</div>
                   <h3>{{ record.model }}</h3>
+                  <small v-if="record.remark" class="chip-remark">{{ record.remark }}</small>
                 </div>
                 <span class="badge">{{ record.manufacturer || "厂家待补充" }}</span>
               </div>
@@ -248,10 +249,6 @@ watch(filteredRecords, () => {
                 <div>
                   <dt>芯片厂商</dt>
                   <dd>{{ record.manufacturer || "-" }}</dd>
-                </div>
-                <div>
-                  <dt>一级分类</dt>
-                  <dd>{{ activeCategory.title }}</dd>
                 </div>
                 <div class="record-highlight">
                   <dt>资料来源</dt>
@@ -597,6 +594,14 @@ watch(filteredRecords, () => {
 .chip-record-top h3 {
   margin: 4px 0 0;
   font-size: 20px;
+}
+
+.chip-remark {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.4;
 }
 
 .record-meta {

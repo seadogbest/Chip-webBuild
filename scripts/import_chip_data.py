@@ -106,16 +106,17 @@ def normalize_datasheet(raw_value: str, model: str = "") -> Tuple[str, str]:
         else:
             return "", f"本地PDF缺失: {pdf_filename}"
     if cleaned:
-        return "", "待芯片原厂补充"
+        return "", cleaned
     return "", "待芯片原厂补充"
 
 
 def build_records(rows: List[List[str]]) -> List[Dict[str, str]]:
     records = []
-    for index, row in enumerate(rows[2:], start=1):
-        row = row + [""] * (6 - len(row))
-        _, model, manufacturer, primary_category, secondary_category, datasheet = row[:6]
-        if not any([model, manufacturer, primary_category, secondary_category, datasheet]):
+    for index, row in enumerate(rows[1:], start=1):
+        row = row + [""] * (7 - len(row))
+        _, model, manufacturer, primary_category, secondary_category, datasheet, remark = row[:7]
+        if not any([model, manufacturer, primary_category, secondary_category, datasheet, remark]):
+            print(f"  [SKIP] 第 {index + 2} 行（xlsx行号）被跳过，内容: model={model!r} manufacturer={manufacturer!r} primary={primary_category!r} secondary={secondary_category!r} datasheet={datasheet!r} remark={remark!r}")
             continue
 
         datasheet_url, datasheet_note = normalize_datasheet(datasheet, model)
@@ -127,6 +128,7 @@ def build_records(rows: List[List[str]]) -> List[Dict[str, str]]:
             "secondaryCategory": secondary_category,
             "datasheetUrl": datasheet_url,
             "datasheetNote": datasheet_note,
+            "remark": remark,
         }
         records.append(record)
 

@@ -25,11 +25,10 @@ const selectedSubsystemOptions = computed(() => {
   return activeDomain.value.subsystemDetails?.[selectedSubsystem.value] ?? [];
 });
 const selectedSubsystemDisplay = computed(() => selectedSubsystemDetail.value || selectedSubsystem.value);
-const shouldShowBodyPower48vDiagram = computed(
+const shouldShow48vDcdcDiagram = computed(
   () =>
-    activeDomain.value?.key === "domain-body-power" &&
-    selectedSubsystem.value === "汽车辅助系统" &&
-    selectedSubsystemDetail.value === "汽车48V辅助电机驱动"
+    activeDomain.value?.key === "domain-48v" &&
+    selectedSubsystem.value === "区域 DC-DC 转换器 48V-12V"
 );
 const selectedSubsystemIndex = computed(() => {
   if (!activeDomain.value) {
@@ -287,7 +286,7 @@ watch(
   { immediate: true }
 );
 
-watch(shouldShowBodyPower48vDiagram, (shouldShow) => {
+watch(shouldShow48vDcdcDiagram, (shouldShow) => {
   if (shouldShow) {
     selectedChipNodeId.value = diagramNodes[0].id;
     nextTick(() => {
@@ -398,7 +397,7 @@ function handleSvgKeyboard(event) {
 }
 
 onMounted(() => {
-  if (!shouldShowBodyPower48vDiagram.value) {
+  if (!shouldShow48vDcdcDiagram.value) {
     return;
   }
   setupSvgHotspots();
@@ -442,7 +441,7 @@ function getSourceDomain(url) {
         <RouterLink to="/" class="btn ghost">返回 Domain 首页</RouterLink>
       </div>
 
-      <div v-if="!shouldShowBodyPower48vDiagram" class="domain-cover">
+      <div v-if="!shouldShow48vDcdcDiagram" class="domain-cover">
         <img :src="selectedSubsystemCover" :alt="selectedSubsystem" class="cover-image" />
         <div class="cover-caption">{{ selectedSubsystemDisplay }}</div>
       </div>

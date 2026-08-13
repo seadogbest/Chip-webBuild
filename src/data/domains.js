@@ -35,7 +35,13 @@ export const domains = [
       "传动系统启动发电机 48V-逆变器 ISG"
     ],
     functions: ["48V Energy Flow", "ISG Control", "Dual DC-DC Management"],
-    subsystemDetails: {}
+    subsystemDetails: {},
+    solutionProviders: {
+      "区域 DC-DC 转换器 48V-12V": {
+        name: "金脉电子",
+        url: "http://www.g-pulse.com.cn/#/"
+      }
+    }
   },
   {
     key: "domain-adas",
@@ -65,7 +71,7 @@ export const domains = [
     subsystems: ["汽车辅助系统", "汽车配电系统", "车身控制模块 (BCM)", "舒适便捷电子产品"],
     functions: ["Smart Window Control", "Zonal Gateway", "Power Distribution Logic"],
     subsystemDetails: {
-      汽车辅助系统: ["辅助电机控制-12VDC 电机控制器", "汽车48V辅助电机驱动", "CAV 液压管理系统", "CAV 气动管理系统"],
+      汽车辅助系统: ["辅助电机控制-12VDC 电机控制器", "CAV 液压管理系统", "CAV 气动管理系统"],
       汽车配电系统: ["汽车一次配电单元", "汽车二次配电单元"],
       "车身控制模块 (BCM)": ["汽车车身控制模块 (BCM)", "带集成网关的车身控制模块 (BCM)"],
       舒适便捷电子产品: [
@@ -79,12 +85,6 @@ export const domains = [
         "智能车窗升降模块",
         "挡风玻璃雨刮器系统"
       ]
-    },
-    solutionProviders: {
-      汽车48V辅助电机驱动: {
-        name: "金脉电子",
-        url: "http://www.g-pulse.com.cn/#/"
-      }
     }
   },
   {
