@@ -2,7 +2,11 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { RouterLink, useRoute } from "vue-router";
 import { domains } from "../data/domains";
-import diagram48vSvg from "../assets/Slide 16_9 - 1.svg?raw";
+import { chipRecords } from "../data/chip-records.generated";
+import diagram48vSvg from "../assets/SVG/demo.svg?raw";
+import iviDiagramSvg from "../assets/SVG/芯力特-IVI框图.svg?raw";
+import bluetoothDiagramSvg from "../assets/SVG/芯力特-蓝牙框图.svg?raw";
+import aiDemoDiagramSvg from "../assets/SVG/ai_demo.svg?raw";
 
 const route = useRoute();
 const selectedSubsystem = ref("");
@@ -30,6 +34,35 @@ const shouldShow48vDcdcDiagram = computed(
     activeDomain.value?.key === "domain-48v" &&
     selectedSubsystem.value === "区域 DC-DC 转换器 48V-12V"
 );
+const activeSubsystemSlides = computed(
+  () => activeDomain.value?.subsystemDiagrams?.[selectedSubsystem.value] ?? []
+);
+const shouldShowSubsystemDiagram = computed(() => activeSubsystemSlides.value.length > 0);
+const diagramSvgMap = {
+  ivi: iviDiagramSvg,
+  "ivi-bluetooth": bluetoothDiagramSvg,
+  "ivi-ai-demo": aiDemoDiagramSvg
+};
+const activeSlideIndex = ref(0);
+const activeSlide = computed(() => activeSubsystemSlides.value[activeSlideIndex.value] ?? null);
+const activeSlideSvg = computed(() => diagramSvgMap[activeSlide.value?.svgKey] ?? "");
+const activeSlideProvider = computed(() => activeSlide.value?.provider ?? null);
+
+function prevSubsystemSlide() {
+  const count = activeSubsystemSlides.value.length;
+  if (!count) {
+    return;
+  }
+  activeSlideIndex.value = (activeSlideIndex.value - 1 + count) % count;
+}
+
+function nextSubsystemSlide() {
+  const count = activeSubsystemSlides.value.length;
+  if (!count) {
+    return;
+  }
+  activeSlideIndex.value = (activeSlideIndex.value + 1) % count;
+}
 const selectedSubsystemIndex = computed(() => {
   if (!activeDomain.value) {
     return 0;
@@ -291,9 +324,236 @@ watch(shouldShow48vDcdcDiagram, (shouldShow) => {
     selectedChipNodeId.value = diagramNodes[0].id;
     nextTick(() => {
       setupSvgHotspots();
+      updateDiagramPanelHeight();
     });
   }
 });
+
+/* ===== 信息娱乐系统（IVI）各框图：可点击芯片节点（型号取自 SVG 标注） ===== */
+const iviChipNodes = [
+  { id: "can1", label: "CAN 收发器（通道 1）", model: "SIT1042" },
+  { id: "can2", label: "CAN 收发器（通道 2）", model: "SIT1042" },
+  { id: "can-transceiver", label: "CAN 收发器", model: "SIT1042" },
+  { id: "lin1", label: "LIN 收发器", model: "SIT1021" },
+  // 蓝牙钥匙主模块框图（ai_demo.svg）
+  { id: "ai-buck", label: "宽压同步 Buck", model: "SGM61330CQTUK12G/TR" },
+  { id: "ai-ldo", label: "固定 5V LDO", model: "NSR31050-QSTAR" },
+  { id: "ai-can", label: "车规级 CAN 收发器", model: "SIT1042AQT/3" },
+  { id: "ai-mcu", label: "蓝牙钥匙主控 MCU", model: "LS-E1460AIPQJLBT" },
+  { id: "ai-ble", label: "BLE/SLE 无线通信 SoC", model: "BS21Q333A" },
+  { id: "ai-flash", label: "NOR Flash", model: "GT25064EB-HWLA2-TR" },
+  { id: "ai-eeprom", label: "EEPROM", model: "GT25C64A-2GLA1-TR" },
+  { id: "ai-secure", label: "车规级安全芯片", model: "JW17051Q20I" }
+];
+const selectedIviNodeId = ref(iviChipNodes[0].id);
+const selectedIviNode = computed(
+  () => iviChipNodes.find((node) => node.id === selectedIviNodeId.value) ?? iviChipNodes[0]
+);
+const selectedIviChips = computed(() => getIviChipsByModel(selectedIviNode.value.model));
+const iviSvgContainer = ref(null);
+// 当前框图中已绑定交互的芯片节点数量：为 0 时说明该框图没有可点击芯片，无需展示芯片面板
+const iviHotspotCount = ref(0);
+
+function getIviChipsByModel(model) {
+  const prefix = String(model || "").toUpperCase();
+  return chipRecords
+    .filter((record) => String(record.model || "").toUpperCase().startsWith(prefix))
+    .map((record) => ({
+      model: record.model,
+      series: record.secondaryCategory,
+      note: record.remark || `${record.manufacturer} · ${record.secondaryCategory}`,
+      url: record.datasheetUrl
+    }));
+}
+
+const activeDiagramPanel = computed(() => {
+  if (shouldShow48vDcdcDiagram.value) {
+    return {
+      title: `${selectedChipNode.value.label} 可选芯片`,
+      chips: selectedNodeChips.value
+    };
+  }
+  if (shouldShowSubsystemDiagram.value) {
+    // 当前框图没有任何可交互芯片节点时（如纯示意图），隐藏芯片面板
+    if (!iviHotspotCount.value) {
+      return null;
+    }
+    return {
+      title: `${selectedIviNode.value.label} ${selectedIviNode.value.model} 系列可选芯片`,
+      chips: selectedIviChips.value
+    };
+  }
+  return null;
+});
+
+/* ===== 芯片面板高度：跟随框图 SVG 实际渲染尺寸，超出部分由面板内部滚轮滚动 ===== */
+const diagramPanelMaxHeight = ref(0);
+const chipListRef = ref(null);
+
+function updateDiagramPanelHeight() {
+  const container = shouldShow48vDcdcDiagram.value ? diagramSvgContainer.value : iviSvgContainer.value;
+  const svg = container?.querySelector("svg");
+  diagramPanelMaxHeight.value = svg ? Math.round(svg.getBoundingClientRect().height) : 0;
+}
+
+/**
+ * 把落在面板（标题、留白等非列表区域）上的滚轮事件转发给芯片列表，
+ * 避免浏览器把滚轮冒泡到页面导致整页滚动。
+ * 列表内部区域仍交给浏览器原生滚动，保留平滑滚动手感。
+ */
+function handlePanelWheel(event) {
+  const list = chipListRef.value;
+  if (!list || event.deltaY === 0) {
+    return;
+  }
+  // 事件本来就发生在列表内：交给原生滚动处理
+  if (list.contains(event.target)) {
+    return;
+  }
+  // 列表内容不足以产生滚动时，不拦截，让页面正常滚动
+  if (list.scrollHeight <= list.clientHeight) {
+    return;
+  }
+  const atTop = list.scrollTop <= 0;
+  const atBottom = list.scrollTop + list.clientHeight >= list.scrollHeight - 1;
+  // 已到列表边界仍继续滚动：放行给页面，避免"卡住"
+  if ((event.deltaY < 0 && atTop) || (event.deltaY > 0 && atBottom)) {
+    return;
+  }
+  event.preventDefault();
+  list.scrollTop += event.deltaY;
+}
+
+
+// 切换子系统时回到第一套方案，避免沿用上一个子系统的浏览位置
+watch(selectedSubsystem, () => {
+  activeSlideIndex.value = 0;
+});
+
+watch([shouldShowSubsystemDiagram, activeSlide], ([shouldShow, slide]) => {
+  if (!shouldShow || !slide) {
+    return;
+  }
+  selectedIviNodeId.value = iviChipNodes[0].id;
+  nextTick(() => {
+    setupIviSvgInteraction();
+    updateDiagramPanelHeight();
+  });
+});
+
+function setupIviSvgInteraction() {
+  const container = iviSvgContainer.value;
+  const svgRoot = container?.querySelector("svg");
+  if (!svgRoot) {
+    return;
+  }
+  svgRoot.classList.add("diagram-svg");
+  let hotspotCount = 0;
+  const hotspotIds = [];
+  // 形态一：g.chip（IVI 主机框图），模型号写在组内文本里，点击区域为 .clickbox
+  for (const group of svgRoot.querySelectorAll("g.chip")) {
+    const modelMatch = group.textContent.match(/SIT[0-9A-Za-z/-]*/);
+    if (!modelMatch) {
+      continue;
+    }
+    const model = modelMatch[0].toUpperCase();
+    const node =
+      iviChipNodes.find((item) => item.id === group.id && item.model === model) ??
+      iviChipNodes.find((item) => item.model === model);
+    const clickbox = group.querySelector(".clickbox");
+    if (!node || !clickbox) {
+      continue;
+    }
+    clickbox.classList.add("ivi-chip-hotspot");
+    clickbox.dataset.iviNodeId = node.id;
+    clickbox.setAttribute("role", "button");
+    clickbox.setAttribute("tabindex", "0");
+    clickbox.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
+    hotspotCount += 1;
+    hotspotIds.push(node.id);
+  }
+  // 形态二：g.chip-node（蓝牙框图），模型号在 data-part-number 上，组本身就是点击区域
+  for (const group of svgRoot.querySelectorAll("g.chip-node")) {
+    const model = String(group.dataset.partNumber || "").toUpperCase();
+    const node = iviChipNodes.find((item) => item.model === model);
+    if (!node) {
+      continue;
+    }
+    group.classList.add("ivi-chip-hotspot");
+    group.dataset.iviNodeId = node.id;
+    group.setAttribute("role", "button");
+    group.setAttribute("tabindex", "0");
+    group.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
+    hotspotCount += 1;
+    hotspotIds.push(node.id);
+  }
+  // 形态三：g.clickable（蓝牙钥匙主模块框图），型号写在 data-part-number 上，组本身即点击区域
+  for (const group of svgRoot.querySelectorAll("g.clickable[data-part-number]:not(.chip-node)")) {
+    const model = String(group.dataset.partNumber || "").toUpperCase();
+    const node = iviChipNodes.find((item) => item.model.toUpperCase() === model);
+    if (!node) {
+      continue;
+    }
+    // SVG 内联 onclick/onkeydown 依赖未随 v-html 执行的 <script>，先移除以免点击报错
+    group.removeAttribute("onclick");
+    group.removeAttribute("onkeydown");
+    group.classList.add("ivi-chip-hotspot");
+    group.dataset.iviNodeId = node.id;
+    group.setAttribute("role", "button");
+    group.setAttribute("tabindex", "0");
+    group.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
+    hotspotCount += 1;
+    hotspotIds.push(node.id);
+  }
+  iviHotspotCount.value = hotspotCount;
+  // 当前框图不含默认节点时，自动选中框图内第一个可点击芯片，保证高亮与右侧面板一致
+  if (hotspotIds.length && !hotspotIds.includes(selectedIviNodeId.value)) {
+    selectedIviNodeId.value = hotspotIds[0];
+  }
+  syncIviSelection();
+}
+
+function syncIviSelection() {
+  const svgRoot = iviSvgContainer.value?.querySelector("svg");
+  if (!svgRoot) {
+    return;
+  }
+  for (const group of svgRoot.querySelectorAll("g.chip")) {
+    const clickbox = group.querySelector(".clickbox");
+    group.classList.toggle("selected", clickbox?.dataset.iviNodeId === selectedIviNodeId.value);
+  }
+  for (const group of svgRoot.querySelectorAll("g.chip-node")) {
+    group.classList.toggle("selected", group.dataset.iviNodeId === selectedIviNodeId.value);
+  }
+  for (const group of svgRoot.querySelectorAll("g.clickable[data-part-number]:not(.chip-node)")) {
+    group.classList.toggle("selected", group.dataset.iviNodeId === selectedIviNodeId.value);
+  }
+}
+
+function chooseIviNode(nodeId) {
+  selectedIviNodeId.value = nodeId;
+  syncIviSelection();
+}
+
+function handleIviSvgClick(event) {
+  const target = event.target.closest(".ivi-chip-hotspot");
+  if (!target) {
+    return;
+  }
+  chooseIviNode(target.dataset.iviNodeId);
+}
+
+function handleIviSvgKeyboard(event) {
+  if (event.key !== "Enter" && event.key !== " ") {
+    return;
+  }
+  const target = event.target.closest(".ivi-chip-hotspot");
+  if (!target) {
+    return;
+  }
+  event.preventDefault();
+  chooseIviNode(target.dataset.iviNodeId);
+}
 
 function chooseSubsystem(subsystem) {
   selectedSubsystem.value = subsystem;
@@ -397,24 +657,42 @@ function handleSvgKeyboard(event) {
 }
 
 onMounted(() => {
-  if (!shouldShow48vDcdcDiagram.value) {
-    return;
+  if (shouldShow48vDcdcDiagram.value) {
+    setupSvgHotspots();
   }
-  setupSvgHotspots();
+  if (shouldShowSubsystemDiagram.value) {
+    nextTick(() => {
+      setupIviSvgInteraction();
+    });
+  }
+  nextTick(() => {
+    updateDiagramPanelHeight();
+  });
+  window.addEventListener("resize", updateDiagramPanelHeight);
 });
 
 onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateDiagramPanelHeight);
   const container = diagramSvgContainer.value;
-  if (!container) {
-    return;
+  if (container) {
+    container.querySelectorAll(".diagram-hotspot").forEach((hotspot) => {
+      hotspot.classList.remove("diagram-hotspot");
+      hotspot.removeAttribute("data-node-id");
+      hotspot.removeAttribute("role");
+      hotspot.removeAttribute("tabindex");
+      hotspot.removeAttribute("aria-label");
+    });
   }
-  container.querySelectorAll(".diagram-hotspot").forEach((hotspot) => {
-    hotspot.classList.remove("diagram-hotspot");
-    hotspot.removeAttribute("data-node-id");
-    hotspot.removeAttribute("role");
-    hotspot.removeAttribute("tabindex");
-    hotspot.removeAttribute("aria-label");
-  });
+  const iviRoot = iviSvgContainer.value?.querySelector("svg");
+  if (iviRoot) {
+    iviRoot.querySelectorAll(".ivi-chip-hotspot").forEach((hotspot) => {
+      hotspot.classList.remove("ivi-chip-hotspot");
+      hotspot.removeAttribute("data-ivi-node-id");
+      hotspot.removeAttribute("role");
+      hotspot.removeAttribute("tabindex");
+      hotspot.removeAttribute("aria-label");
+    });
+  }
 });
 
 function getSourceDomain(url) {
@@ -441,12 +719,13 @@ function getSourceDomain(url) {
         <RouterLink to="/" class="btn ghost">返回 Domain 首页</RouterLink>
       </div>
 
-      <div v-if="!shouldShow48vDcdcDiagram" class="domain-cover">
+      <div v-if="!shouldShow48vDcdcDiagram && !shouldShowSubsystemDiagram" class="domain-cover">
         <img :src="selectedSubsystemCover" :alt="selectedSubsystem" class="cover-image" />
         <div class="cover-caption">{{ selectedSubsystemDisplay }}</div>
       </div>
       <section v-else class="diagram-panel">
         <div
+          v-if="shouldShow48vDcdcDiagram"
           ref="diagramSvgContainer"
           class="diagram-canvas diagram-svg-container"
           aria-label="48V 轻混系统框图"
@@ -455,26 +734,70 @@ function getSourceDomain(url) {
           @keydown="handleSvgKeyboard"
         >
         </div>
-        <aside class="chip-side-panel">
-          <h2>{{ selectedChipNode.label }} 可选芯片</h2>
-          <a
-            v-for="chip in selectedNodeChips"
-            :key="chip.model"
-            class="chip-option-card"
-            :class="{ clickable: Boolean(chip.url) }"
-            :href="chip.url || '#'"
-            :target="chip.url ? '_blank' : undefined"
-            :rel="chip.url ? 'noreferrer noopener' : undefined"
-            @click="!chip.url && $event.preventDefault()"
+        <div v-else class="diagram-stage">
+          <div
+            ref="iviSvgContainer"
+            class="diagram-canvas diagram-svg-container ivi-diagram-container"
+            :aria-label="activeSlide ? `信息娱乐系统 ${activeSlide.label}` : '信息娱乐系统框图'"
+            v-html="activeSlideSvg"
+            @click="handleIviSvgClick"
+            @keydown="handleIviSvgKeyboard"
           >
-            <div class="chip-series">{{ chip.series }}</div>
-            <div class="chip-model">{{ chip.model }}</div>
-            <div v-if="chip.url" class="chip-link-meta" aria-label="芯片来源链接">
-              <span class="external-icon" aria-hidden="true">↗</span>
-              <span>{{ getSourceDomain(chip.url) }}</span>
-            </div>
-            <p>{{ chip.note }}</p>
-          </a>
+          </div>
+          <template v-if="activeSubsystemSlides.length > 1">
+            <button
+              type="button"
+              class="slide-arrow prev"
+              aria-label="查看上一套方案"
+              @click="prevSubsystemSlide"
+            >‹</button>
+            <button
+              type="button"
+              class="slide-arrow next"
+              aria-label="查看下一套方案"
+              @click="nextSubsystemSlide"
+            >›</button>
+          </template>
+          <div v-if="activeSlide" class="diagram-slide-caption">
+            {{ activeSlideIndex + 1 }} / {{ activeSubsystemSlides.length }} · {{ activeSlide.label }}
+          </div>
+        </div>
+        <aside
+          v-if="activeDiagramPanel"
+          class="chip-side-panel"
+          :style="diagramPanelMaxHeight ? { height: `${diagramPanelMaxHeight}px` } : undefined"
+          @wheel="handlePanelWheel"
+        >
+          <h2>{{ activeDiagramPanel.title }}</h2>
+          <div
+            v-if="activeDiagramPanel.chips.length"
+            ref="chipListRef"
+            class="chip-list"
+            tabindex="0"
+            aria-label="可选芯片列表，可使用鼠标滚轮上下浏览"
+          >
+            <a
+              v-for="chip in activeDiagramPanel.chips"
+              :key="chip.model"
+              class="chip-option-card"
+              :class="{ clickable: Boolean(chip.url) }"
+              :href="chip.url || '#'"
+              :target="chip.url ? '_blank' : undefined"
+              :rel="chip.url ? 'noreferrer noopener' : undefined"
+              @click="!chip.url && $event.preventDefault()"
+            >
+              <div class="chip-series">{{ chip.series }}</div>
+              <div class="chip-model">{{ chip.model }}</div>
+              <div v-if="chip.url" class="chip-link-meta" aria-label="芯片来源链接">
+                <span class="external-icon" aria-hidden="true">↗</span>
+                <span>{{ getSourceDomain(chip.url) }}</span>
+              </div>
+              <p>{{ chip.note }}</p>
+            </a>
+          </div>
+          <p v-else class="chip-panel-empty">
+            数据库中暂无该型号的芯片资料。
+          </p>
         </aside>
       </section>
 
@@ -636,6 +959,65 @@ function getSourceDomain(url) {
   overflow: hidden;
 }
 
+/* ===== 多厂商方案轮播 ===== */
+.diagram-stage {
+  position: relative;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e3a8a;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.14);
+  transition: 0.2s ease;
+}
+
+.slide-arrow.prev {
+  left: 10px;
+}
+
+.slide-arrow.next {
+  right: 10px;
+}
+
+.slide-arrow:hover {
+  background: #eff6ff;
+  border-color: #60a5fa;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.slide-arrow:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.diagram-slide-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  border: 1px solid rgba(191, 219, 254, 0.5);
+  background: rgba(15, 23, 42, 0.55);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  backdrop-filter: blur(4px);
+}
+
 .diagram-svg-container :deep(.diagram-svg) {
   display: block;
   width: 100%;
@@ -662,6 +1044,27 @@ function getSourceDomain(url) {
   outline: none;
 }
 
+.ivi-diagram-container :deep(g.chip .clickbox) {
+  outline: none;
+}
+
+.ivi-diagram-container :deep(g.chip:hover .block-green),
+.ivi-diagram-container :deep(g.chip:focus-within .block-green) {
+  stroke: #2f80ed;
+  stroke-width: 3;
+}
+
+.ivi-diagram-container :deep(g.chip.selected .block-green) {
+  stroke: #2f80ed;
+  stroke-width: 3.5;
+}
+
+.chip-panel-empty {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
 .chip-side-panel {
   border: 1px solid #dbeafe;
   border-radius: 14px;
@@ -670,6 +1073,45 @@ function getSourceDomain(url) {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
+}
+
+.chip-list {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 6px;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #93c5fd transparent;
+}
+
+.chip-list:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.chip-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chip-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chip-list::-webkit-scrollbar-thumb {
+  background: #bfdbfe;
+  border-radius: 999px;
+}
+
+.chip-list::-webkit-scrollbar-thumb:hover {
+  background: #93c5fd;
 }
 
 .chip-side-panel h2 {

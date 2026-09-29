@@ -600,11 +600,11 @@ export const chipRecords = [
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtd125p06lq-61",
+    "id": "chip-mos-crtd125p06lq-61",
     "model": "CRTD125P06LQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/3a150784-4574-42fc-94c4-21bedf83cdbf.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -640,411 +640,411 @@ export const chipRecords = [
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtm125p06lq-65",
+    "id": "chip-mos-crtm125p06lq-65",
     "model": "CRTM125P06LQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/3a150784-4574-42fc-94c4-21bedf83cdbf.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtd680p10lq-66",
+    "id": "chip-mos-crtd680p10lq-66",
     "model": "CRTD680P10LQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/70d6b715-6a4b-4501-b08b-64000e2f2b89.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtm900p10lq-67",
+    "id": "chip-mos-crtm900p10lq-67",
     "model": "CRTM900P10LQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/7be82542-5f2c-4227-828c-56f935f9815a.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtd34dp20l2z-q-68",
+    "id": "chip-mos-crtd34dp20l2z-q-68",
     "model": "CRTD34DP20L2Z-Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2025-03-12/5eec85a8-5dac-4a0b-bfac-cec9c793c36a.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crte110n03lz-69",
+    "id": "chip-mos-crte110n03lz-69",
     "model": "CRTE110N03LZ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/296e3a1a-7a2a-4fa9-942e-a774cefefe51.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm006n04n6q-12-70",
+    "id": "chip-mos-crsm006n04n6q-12-70",
     "model": "CRSM006N04N6Q-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-07-10/6eebf91f-c61d-44d1-9f6f-0b442ac5a016.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsy030n04l2q-71",
+    "id": "chip-mos-crsy030n04l2q-71",
     "model": "CRSY030N04L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/100e9e97-aef3-46d9-bbe3-18625c0fd054.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm023n04n2z-72",
+    "id": "chip-mos-crsm023n04n2z-72",
     "model": "CRSM023N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/aacb0358-bb49-46f6-8b4d-dabecbb8ce46.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm037n04l2q-73",
+    "id": "chip-mos-crsm037n04l2q-73",
     "model": "CRSM037N04L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/6bf43e5a-2bdb-4076-b7a3-c98157b8b34e.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsy035n04n2z-74",
+    "id": "chip-mos-crsy035n04n2z-74",
     "model": "CRSY035N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/bc385ce1-7c4f-459c-b4e3-082aaaa7691c.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm046n04n2z-75",
+    "id": "chip-mos-crsm046n04n2z-75",
     "model": "CRSM046N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-11-08/76d3324b-e1d6-4f5b-abd7-4724fa4575a6.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsd041n04n2z-76",
+    "id": "chip-mos-crsd041n04n2z-76",
     "model": "CRSD041N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/d6b311fb-24f9-4262-b189-3caee514e7a2.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm054n04l2dq-77",
+    "id": "chip-mos-crsm054n04l2dq-77",
     "model": "CRSM054N04L2DQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/012c246b-33a6-4ab6-9cd2-f31350760aa6.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm056n04l2q-78",
+    "id": "chip-mos-crsm056n04l2q-78",
     "model": "CRSM056N04L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/1c510150-f1cd-404d-aaad-992c7e126d29.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm055n04n2z-79",
+    "id": "chip-mos-crsm055n04n2z-79",
     "model": "CRSM055N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/02f5f54d-ea16-415a-a34f-30f56fe17cd7.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm045n04n2z-80",
+    "id": "chip-mos-crsm045n04n2z-80",
     "model": "CRSM045N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/7f3c4d77-1808-4e7d-af2c-208eba8fbbf5.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsk060n04n2z-81",
+    "id": "chip-mos-crsk060n04n2z-81",
     "model": "CRSK060N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-10-23/7e2dd996-b1d0-4e1d-8dca-4c79ab2f8b26.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm054n04n2dz-82",
+    "id": "chip-mos-crsm054n04n2dz-82",
     "model": "CRSM054N04N2DZ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/7fa4a3c2-c276-4489-819b-6337d38dca9c.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsy052n04n2z-83",
+    "id": "chip-mos-crsy052n04n2z-83",
     "model": "CRSY052N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-10-31/2c7eef26-ecb0-4919-af4f-dd3b1367329d.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm076n04n2z-84",
+    "id": "chip-mos-crsm076n04n2z-84",
     "model": "CRSM076N04N2Z",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/6a702c65-11c4-4328-85d4-60fe5c424238.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crpt090ne5nz-g-85",
+    "id": "chip-mos-crpt090ne5nz-g-85",
     "model": "CRPT090NE5NZ-G",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-02-13/618f805e-432c-40b4-af11-24e8fec0b403.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crpq090ne5nz-g-86",
+    "id": "chip-mos-crpq090ne5nz-g-86",
     "model": "CRPQ090NE5NZ-G",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-02-13/87f05b8a-903c-4849-869a-f8c2a94ae738.PDF",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsy045n06l2q-87",
+    "id": "chip-mos-crsy045n06l2q-87",
     "model": "CRSY045N06L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-11-08/a5e34c76-72be-4e54-ac1a-ed317a1a75f5.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsd110n06l2q-88",
+    "id": "chip-mos-crsd110n06l2q-88",
     "model": "CRSD110N06L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/1cf77342-002e-46b0-8446-7ce8b863e1f0.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm120n06l2q-89",
+    "id": "chip-mos-crsm120n06l2q-89",
     "model": "CRSM120N06L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/19919849-ea05-40af-b89a-235b2e548bb1.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsm260n06ldq-90",
+    "id": "chip-mos-crsm260n06ldq-90",
     "model": "CRSM260N06LDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/2b3a5cf4-ef28-46c5-a78c-4b42e7b4d9c1.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsz016n10n4q-12-91",
+    "id": "chip-mos-crsz016n10n4q-12-91",
     "model": "CRSZ016N10N4Q-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-01-02/e401c48b-841b-4896-b7f4-4703d421f6aa.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crszt016n10n4q-92",
+    "id": "chip-mos-crszt016n10n4q-92",
     "model": "CRSZT016N10N4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-01-02/f353e49c-d4c2-4b60-8fdb-6f0b257ccc95.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsz019n10n4q-93",
+    "id": "chip-mos-crsz019n10n4q-93",
     "model": "CRSZ019N10N4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/88000373-23bd-4b50-b783-71c18c2bf551.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsg022n10n4q-94",
+    "id": "chip-mos-crsg022n10n4q-94",
     "model": "CRSG022N10N4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/6318c842-91c9-4919-9415-f41799eda7e7.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsy140n10l2q-95",
+    "id": "chip-mos-crsy140n10l2q-95",
     "model": "CRSY140N10L2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-02-21/0b542ba4-cc44-495d-9108-f38e3a36f055.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crtd360n10lz-96",
+    "id": "chip-mos-crtd360n10lz-96",
     "model": "CRTD360N10LZ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/ccc277bb-0e60-4908-913f-e55e4b61b1c3.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsz043n15n3q-97",
+    "id": "chip-mos-crsz043n15n3q-97",
     "model": "CRSZ043N15N3Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2025-09-30/9516aea8-bec7-4c30-b8d4-d088abe53dd6.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crss070n15nz-q-98",
+    "id": "chip-mos-crss070n15nz-q-98",
     "model": "CRSS070N15NZ-Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/ae8a1be3-fbc3-4335-89f5-04d6d021a9e2.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crst073n15nz-q-99",
+    "id": "chip-mos-crst073n15nz-q-99",
     "model": "CRST073N15NZ-Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2024-09-02/56a90fcd-175f-4340-bcbd-dacafb9606ba.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crss109n20nz-q-100",
+    "id": "chip-mos-crss109n20nz-q-100",
     "model": "CRSS109N20NZ-Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-03-13/266e1c65-3e8a-41b3-aacc-5cda909f2c7c.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crsq113n20nz-q-101",
+    "id": "chip-mos-crsq113n20nz-q-101",
     "model": "CRSQ113N20NZ-Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET02/2023-08-14/P020230531495580342351.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crjq41n65gcfq-12-102",
+    "id": "chip-mos-crjq41n65gcfq-12-102",
     "model": "CRJQ41N65GCFQ-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET03/2023-08-14/fb5c3a65-d318-4375-ac35-2d03b4096929.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crjsp50n65g4fq-12-103",
+    "id": "chip-mos-crjsp50n65g4fq-12-103",
     "model": "CRJSP50N65G4FQ-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET03/2026-02-12/7d573fe7-8db6-429c-b74d-1a034b3b07be.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crjs750n80g2eq-104",
+    "id": "chip-mos-crjs750n80g2eq-104",
     "model": "CRJS750N80G2EQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/100V12VPMOSinfo/2024-10-23/4d8156df-5df8-4512-8eb2-4d11b84a61ac.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-mosfet-crjs10kn120g2q-105",
+    "id": "chip-mos-crjs10kn120g2q-105",
     "model": "CRJS10KN120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "MOSFET",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET04/2025-11-21/ad950497-2eac-4db4-904b-8329aa71c67b.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1054,7 +1054,7 @@ export const chipRecords = [
     "model": "CRXSH14M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/1dd0c5ab-025a-499f-8bc9-060f7467d314.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1064,7 +1064,7 @@ export const chipRecords = [
     "model": "CRXZA25M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-08-04/4a04974a-0a82-405d-9c19-cbbe1497cb69.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1074,7 +1074,7 @@ export const chipRecords = [
     "model": "CRXSH25M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-05-26/5fcbfd45-0991-4c02-b2b4-6552fe7a022e.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1084,7 +1084,7 @@ export const chipRecords = [
     "model": "CRXQF25M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-13/a823b978-9561-4a33-8f23-4c0992d0515e.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1094,7 +1094,7 @@ export const chipRecords = [
     "model": "CRXSP25M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-06-05/cbdead82-8cc2-4cad-b47a-2f8a4c167039.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1104,7 +1104,7 @@ export const chipRecords = [
     "model": "CRXZA25M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-13/58e1c5c6-0da2-497b-9dbb-4a330a3bdd70.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1114,7 +1114,7 @@ export const chipRecords = [
     "model": "CRXSH25M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-13/9f038f9a-7489-4b9e-ac68-dbc9e7d6fa4f.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1124,7 +1124,7 @@ export const chipRecords = [
     "model": "CRXQF25M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFETgj/2025-03-12/50736abd-f252-4881-8724-6f8c1a463720.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1134,7 +1134,7 @@ export const chipRecords = [
     "model": "CRXSP25M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFETgj/2025-03-12/a9d388af-b164-430b-91cf-2d91f6a7c707.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1144,7 +1144,7 @@ export const chipRecords = [
     "model": "CRXZA40M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-01-04/2bdcc580-967d-48f2-b1ae-10a0646f2c0b.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1154,7 +1154,7 @@ export const chipRecords = [
     "model": "CRXT60M065G1Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2024-11-12/4d652bfd-748c-4fc0-afa4-24fb975eb87f.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1164,7 +1164,7 @@ export const chipRecords = [
     "model": "CRXSP45M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-06-27/31063e5d-381e-41e2-ac75-635546733f91.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1174,7 +1174,7 @@ export const chipRecords = [
     "model": "CRXZA45M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-01/a3d18e34-04f8-47b0-b8c5-144ed9f92d97.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1184,7 +1184,7 @@ export const chipRecords = [
     "model": "CRXSH45M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-05-26/6bba1a73-c51f-4779-bd16-859cbb71f998.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1194,7 +1194,7 @@ export const chipRecords = [
     "model": "CRXZA60M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-09-16/d12bb68c-d884-424f-8f44-0b890d39e70e.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1204,7 +1204,7 @@ export const chipRecords = [
     "model": "CRXSH60M065G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-08-04/f990d83a-ac03-492f-b884-db61859fb423.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1214,7 +1214,7 @@ export const chipRecords = [
     "model": "CRXQF60M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-20/f79baea6-2686-424c-8c2b-990dc3f134dd.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1224,7 +1224,7 @@ export const chipRecords = [
     "model": "CRXZA60M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-20/5f9030f7-c46d-4134-9074-2d82ebacdbe5.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1234,7 +1234,7 @@ export const chipRecords = [
     "model": "CRXSH60M065G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-06-05/8b501e25-6fb5-446f-a2ac-169e9db9f9c2.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1244,7 +1244,7 @@ export const chipRecords = [
     "model": "CRXQF13M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-09-16/1a14288a-60f8-481c-8c44-3b69fa485f4d.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1254,7 +1254,7 @@ export const chipRecords = [
     "model": "CRXZA13M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-25/4425aad4-adaf-41c4-849b-bd73199c1d65.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1264,7 +1264,7 @@ export const chipRecords = [
     "model": "CRXQF18M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-04-13/074a5d53-b68c-4f07-9f0d-a33903d73cf6.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1274,7 +1274,7 @@ export const chipRecords = [
     "model": "CRXSH18M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/98605af8-b16e-49b2-8c23-b2f66e66285e.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1284,7 +1284,7 @@ export const chipRecords = [
     "model": "CRXZA18M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-06-05/ff69d20b-4938-4b3e-8f49-4d934623a4ae.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1294,7 +1294,7 @@ export const chipRecords = [
     "model": "CRXSP35M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-24/a55cb434-f1ea-4b15-b37c-a42f2be4681e.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1304,7 +1304,7 @@ export const chipRecords = [
     "model": "CRXSH35M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-03/10413314-88ea-40b6-8f78-b796395e2a2a.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1314,7 +1314,7 @@ export const chipRecords = [
     "model": "CRXZA35M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-25/c2ac1028-5352-4619-a3e4-5f8e72e6a927.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1324,7 +1324,7 @@ export const chipRecords = [
     "model": "CRXZA27M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/16164fc3-4b5f-4801-b2c9-1466fadffc26.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1334,7 +1334,7 @@ export const chipRecords = [
     "model": "CRXSH27M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-03/d6d7f620-5d84-429f-bd16-7eaf5e9539cf.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1344,7 +1344,7 @@ export const chipRecords = [
     "model": "CRXSP27M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/59d8d460-d02d-4ff3-bb3f-0e7b863588f4.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1354,7 +1354,7 @@ export const chipRecords = [
     "model": "CRXQF35M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-03/80d278d7-cd34-4487-975c-99646d627a83.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1364,7 +1364,7 @@ export const chipRecords = [
     "model": "CRXQF40M120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFETgj/2025-03-12/b14720d8-aaff-4747-81f0-70221dab71fa.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1374,7 +1374,7 @@ export const chipRecords = [
     "model": "CRXSP40M120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFETgj/2025-03-12/dca6d8d3-3d6c-472f-91a3-88314a655b40.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1384,7 +1384,7 @@ export const chipRecords = [
     "model": "CRXQF60M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-01-27/58674811-99e1-4658-969c-9d25a9a3cfb5.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1394,7 +1394,7 @@ export const chipRecords = [
     "model": "CRXSP60M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-01-27/1b58ac5a-58bf-4406-87bb-15a41d6196b6.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1404,7 +1404,7 @@ export const chipRecords = [
     "model": "CRXSH60M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2026-01-27/baadfb50-e538-4089-8c48-03f673067bb7.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1414,7 +1414,7 @@ export const chipRecords = [
     "model": "CRXQF60M120G2BQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFETgj/2026-02-27/60d2da84-6739-4bb4-8326-f98b8289e997.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1424,7 +1424,7 @@ export const chipRecords = [
     "model": "CRXSP75M120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2023-12-19/50246b17-4e93-4ca0-b8fe-7023f747e2ab.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1434,7 +1434,7 @@ export const chipRecords = [
     "model": "CRXZA75M120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/7ab55e39-4129-49f6-95cf-0ae5c4afbeb4.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1444,7 +1444,7 @@ export const chipRecords = [
     "model": "CRXQF75M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-21/b7e2f09a-6bf4-419f-96e8-52728a60e6fe.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1454,7 +1454,7 @@ export const chipRecords = [
     "model": "CRXSP75M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-02/7aee1391-2958-4a6b-a9c2-1aa200dddc9d.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1464,7 +1464,7 @@ export const chipRecords = [
     "model": "CRXZA75M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-01/93eb2cd2-c513-45ed-bf1e-1945365f3f5b.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1474,7 +1474,7 @@ export const chipRecords = [
     "model": "CRXSH75M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-01/b86090a8-d85d-492b-ac97-bda6a90026fb.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1484,7 +1484,7 @@ export const chipRecords = [
     "model": "CRXSP140M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-25/d53d4ce7-e8c4-44b8-957a-2dbddf52d33c.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1494,7 +1494,7 @@ export const chipRecords = [
     "model": "CRXSH140M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-11-25/ffbf0330-a35c-431b-82cc-fe7a0e84f2ce.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1504,7 +1504,7 @@ export const chipRecords = [
     "model": "CRXZA140M120G4Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2025-12-03/cb1fb936-8b49-4e09-b42f-9861adaaff16.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1514,7 +1514,7 @@ export const chipRecords = [
     "model": "CRXSP160M120G2Q",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "SIC",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCMOSFET/2024-11-12/f8d15418-0785-4744-82da-9cdde5bc0eb7.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1524,7 +1524,7 @@ export const chipRecords = [
     "model": "CRG40T65RK5SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2025-03-12/88a8fedf-399e-42f1-82f8-cdad56ff0e18.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1534,7 +1534,7 @@ export const chipRecords = [
     "model": "CRG50T65RK5SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2024-03-25/f5faa728-2998-4490-94a2-504bc31f83c5.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1544,7 +1544,7 @@ export const chipRecords = [
     "model": "CRG50T65FK5SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2026-02-27/158ade7a-2597-403c-95e2-32b22f5e5070.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1554,7 +1554,7 @@ export const chipRecords = [
     "model": "CRG75T65BK5HDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2024-03-25/ae50fb16-7786-4ca3-a780-e6acc684c042.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1564,7 +1564,7 @@ export const chipRecords = [
     "model": "CRG75T65CK5SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2025-03-12/c865b458-43e2-4111-8e3f-9a2ccd2e0f7c.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1574,7 +1574,7 @@ export const chipRecords = [
     "model": "CRG75T65AK5SCDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletube/2026-02-03/0d84f4b8-05ab-4b59-9c5a-3a8d7a8cd806.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1584,7 +1584,7 @@ export const chipRecords = [
     "model": "CRG40T120CK3LDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletube/2023-10-11/7b4c0225-d33f-4d59-ba53-aa8a8a6dd9f7.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1594,7 +1594,7 @@ export const chipRecords = [
     "model": "CRG40T120CK3SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletubegj/2026-02-27/26998447-ef7f-4f47-a08f-e86781265984.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1604,177 +1604,177 @@ export const chipRecords = [
     "model": "CRG75T120CX3SDQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "IGBT",
+    "secondaryCategory": "IGBT芯片",
     "datasheetUrl": "https://www.crmicro.com/IGBTsingletube/2025-09-26/7ecf8e69-3948-4071-9b44-27caf110d630.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh74m65emaq-162",
+    "id": "chip-mos-crjmh74m65emaq-162",
     "model": "CRJMH74M65EMAQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06ADD/2024-05-13/d46577d3-4e3f-4310-8d0f-0fcf13232aab.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh74m65emaq-12-163",
+    "id": "chip-mos-crjmh74m65emaq-12-163",
     "model": "CRJMH74M65EMAQ-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06ADD/2024-05-13/d46577d3-4e3f-4310-8d0f-0fcf13232aab.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh43m65emaq-164",
+    "id": "chip-mos-crjmh43m65emaq-164",
     "model": "CRJMH43M65EMAQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06ADD/2025-03-12/17acb89e-7bf5-4079-8801-4552edb09c04.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh43m65nmaq-165",
+    "id": "chip-mos-crjmh43m65nmaq-165",
     "model": "CRJMH43M65NMAQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06gj/2026-02-27/610c050e-9bac-4634-a78b-4e96d1d42ec9.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh43m65emaq-12-166",
+    "id": "chip-mos-crjmh43m65emaq-12-166",
     "model": "CRJMH43M65EMAQ-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06ADD/2025-03-12/17acb89e-7bf5-4079-8801-4552edb09c04.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crjmh43m65nmaq-12-167",
+    "id": "chip-mos-crjmh43m65nmaq-12-167",
     "model": "CRJMH43M65NMAQ-12",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "MOS芯片",
     "datasheetUrl": "https://www.crmicro.com/MOSFET06gj/2026-02-27/610c050e-9bac-4634-a78b-4e96d1d42ec9.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh97p065nmg2bq-168",
+    "id": "chip-sic-crxmh97p065nmg2bq-168",
     "model": "CRXMH97P065NMG2BQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmoduleGJ/2026-02-27/304c3bdc-0871-4308-9fd2-61bbc1351630.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh97p065nmg2aq-169",
+    "id": "chip-sic-crxmh97p065nmg2aq-169",
     "model": "CRXMH97P065NMG2AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-03-06/24f90568-e716-42b4-b5d9-6784d7fcc144.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh70p065nmg4aq-170",
+    "id": "chip-sic-crxmh70p065nmg4aq-170",
     "model": "CRXMH70P065NMG4AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2026-04-13/914bcabe-f2ba-44c3-9745-481c406758f5.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh37p075nmg1aq-171",
+    "id": "chip-sic-crxmh37p075nmg1aq-171",
     "model": "CRXMH37P075NMG1AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-05-08/54f44e00-350a-46d6-859e-2b389f1a5549.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh55p120emg4aq-172",
+    "id": "chip-sic-crxmh55p120emg4aq-172",
     "model": "CRXMH55P120EMG4AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-11-04/9ca56a24-e73c-40e2-8d19-d6220311b08d.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh55p120nmg4aq-173",
+    "id": "chip-sic-crxmh55p120nmg4aq-173",
     "model": "CRXMH55P120NMG4AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-11-04/7b059975-b46a-4b9e-9445-dc55a8a2a962.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh40p120emg2bq-174",
+    "id": "chip-sic-crxmh40p120emg2bq-174",
     "model": "CRXMH40P120EMG2BQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-03-19/e8fca626-90b2-4847-b028-941bf3f1afb4.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh40p120nmg2aq-175",
+    "id": "chip-sic-crxmh40p120nmg2aq-175",
     "model": "CRXMH40P120NMG2AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-03-19/15e0d44f-3417-4a35-a11f-f6c4d3ddc2ba.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh32p120nmg4aq-176",
+    "id": "chip-sic-crxmh32p120nmg4aq-176",
     "model": "CRXMH32P120NMG4AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2026-01-27/f69fd163-1045-4211-af31-f97afb655bb6.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh32p120nmg2aq-177",
+    "id": "chip-sic-crxmh32p120nmg2aq-177",
     "model": "CRXMH32P120NMG2AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-09-16/ae8124a1-5a6f-4aac-9355-3639bc5ad1e9.pdf",
     "datasheetNote": "",
     "remark": ""
   },
   {
-    "id": "chip-chip-crxmh17p120nmg2aq-178",
+    "id": "chip-sic-crxmh17p120nmg2aq-178",
     "model": "CRXMH17P120NMG2AQ",
     "manufacturer": "华润微",
     "primaryCategory": "功率类芯片",
-    "secondaryCategory": "功率模块",
+    "secondaryCategory": "SIC芯片",
     "datasheetUrl": "https://www.crmicro.com/SiCsicmodule/2025-04-27/49b528d7-3dfc-4aef-be76-5a1cbebc9fab.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1783,8 +1783,8 @@ export const chipRecords = [
     "id": "chip-chip-qx201-179",
     "model": "QX201",
     "manufacturer": "华润微",
-    "primaryCategory": "感知类芯片",
-    "secondaryCategory": "车载收音接收器",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "射频芯片",
     "datasheetUrl": "https://www.crmicro.com/gznczsyjsxp/2025-03-20/f1316831-9c5a-466f-9742-93d4c62d4b3d.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1793,8 +1793,8 @@ export const chipRecords = [
     "id": "chip-chip-qx300-180",
     "model": "QX300",
     "manufacturer": "华润微",
-    "primaryCategory": "感知类芯片",
-    "secondaryCategory": "车载收音接收器",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "射频芯片",
     "datasheetUrl": "https://www.crmicro.com/gznczsyjsxp/2025-03-20/512e1834-8547-4a29-8693-fba1b4305790.pdf",
     "datasheetNote": "",
     "remark": ""
@@ -1814,7 +1814,7 @@ export const chipRecords = [
     "model": "SIT1021QT/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-67-166-1.html#filedown",
     "datasheetNote": "",
     "remark": ""
@@ -1824,7 +1824,7 @@ export const chipRecords = [
     "model": "SIT1021QTK/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-67-166-1.html#filedown",
     "datasheetNote": "",
     "remark": ""
@@ -1834,7 +1834,7 @@ export const chipRecords = [
     "model": "SIT1021GQTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-67-342-1.html#filedown",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1844,7 +1844,7 @@ export const chipRecords = [
     "model": "SIT1021GQT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-67-342-1.html#filedown",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1854,7 +1854,7 @@ export const chipRecords = [
     "model": "SIT1044QT/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1864,7 +1864,7 @@ export const chipRecords = [
     "model": "SIT1044QTK/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1874,7 +1874,7 @@ export const chipRecords = [
     "model": "SIT1044QT/31",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1884,7 +1884,7 @@ export const chipRecords = [
     "model": "SIT1044QTK/31",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-120-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1894,7 +1894,7 @@ export const chipRecords = [
     "model": "SIT1044GQT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1904,7 +1904,7 @@ export const chipRecords = [
     "model": "SIT1044GQTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1914,7 +1914,7 @@ export const chipRecords = [
     "model": "SIT1044GQT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1924,7 +1924,7 @@ export const chipRecords = [
     "model": "SIT1044GQTK/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-346-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1934,7 +1934,7 @@ export const chipRecords = [
     "model": "SIT1042AQT/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1944,7 +1944,7 @@ export const chipRecords = [
     "model": "SIT1042AQT/31",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1954,7 +1954,7 @@ export const chipRecords = [
     "model": "SIT1042AQTK/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1964,7 +1964,7 @@ export const chipRecords = [
     "model": "SIT1042AQTK/31",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-121-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -1974,7 +1974,7 @@ export const chipRecords = [
     "model": "SIT1042GQT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1984,7 +1984,7 @@ export const chipRecords = [
     "model": "SIT1042GQT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -1994,7 +1994,7 @@ export const chipRecords = [
     "model": "SIT1042GQTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2004,7 +2004,7 @@ export const chipRecords = [
     "model": "SIT1042GQTK/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-350-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2014,7 +2014,7 @@ export const chipRecords = [
     "model": "SIT1043QT/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-119-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -2024,7 +2024,7 @@ export const chipRecords = [
     "model": "SIT1043QTK/1",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-119-1.html",
     "datasheetNote": "",
     "remark": ""
@@ -2034,7 +2034,7 @@ export const chipRecords = [
     "model": "SIT1043GQT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-353-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2044,7 +2044,7 @@ export const chipRecords = [
     "model": "SIT1043GQTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-353-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2054,7 +2054,7 @@ export const chipRecords = [
     "model": "SIT1145AQT/1/FD",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-118-1.html",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2064,7 +2064,7 @@ export const chipRecords = [
     "model": "SIT1145AQTK/1/FD",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-118-1.html",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2074,7 +2074,7 @@ export const chipRecords = [
     "model": "SIT1145GQT/FD",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-358-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2084,7 +2084,7 @@ export const chipRecords = [
     "model": "SIT1145GQTK/FD",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-358-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2094,7 +2094,7 @@ export const chipRecords = [
     "model": "SIT1028QT/1/5V0",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2104,7 +2104,7 @@ export const chipRecords = [
     "model": "SIT1028QT/1/3V3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2114,7 +2114,7 @@ export const chipRecords = [
     "model": "SIT1028QTK/1/5V0",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2124,7 +2124,7 @@ export const chipRecords = [
     "model": "SIT1028QTK/1/3V3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=354",
     "datasheetNote": "",
     "remark": "主推品"
@@ -2134,7 +2134,7 @@ export const chipRecords = [
     "model": "SIT1028GQT/5V0",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2144,7 +2144,7 @@ export const chipRecords = [
     "model": "SIT1028GQT/3V3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2154,7 +2154,7 @@ export const chipRecords = [
     "model": "SIT1028GQTK/5V0",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2164,7 +2164,7 @@ export const chipRecords = [
     "model": "SIT1028GQTK/3V3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "LIN",
+    "secondaryCategory": "LIN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=82&id=355",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2174,7 +2174,7 @@ export const chipRecords = [
     "model": "SIT1051GQT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2184,7 +2184,7 @@ export const chipRecords = [
     "model": "SIT1051GQT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2194,7 +2194,7 @@ export const chipRecords = [
     "model": "SIT1051GQTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2204,7 +2204,7 @@ export const chipRecords = [
     "model": "SIT1051GQTK/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-356-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2214,7 +2214,7 @@ export const chipRecords = [
     "model": "SIT1057GQT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2224,7 +2224,7 @@ export const chipRecords = [
     "model": "SIT1057GQT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2234,7 +2234,7 @@ export const chipRecords = [
     "model": "SIT1057GQTK/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/show-39-359-1.html",
     "datasheetNote": "",
     "remark": "主推品，全国产型号"
@@ -2244,7 +2244,7 @@ export const chipRecords = [
     "model": "SIT1462QT/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2254,7 +2254,7 @@ export const chipRecords = [
     "model": "SIT1462QT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2264,7 +2264,7 @@ export const chipRecords = [
     "model": "SIT1462QTK/3",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2274,7 +2274,7 @@ export const chipRecords = [
     "model": "SIT1462QTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=284",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2284,7 +2284,7 @@ export const chipRecords = [
     "model": "SIT1463QT",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=274",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2294,7 +2294,7 @@ export const chipRecords = [
     "model": "SIT1463QTK",
     "manufacturer": "芯力特",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "CAN",
+    "secondaryCategory": "CAN芯片",
     "datasheetUrl": "http://www.sitcores.com/index.php?m=content&c=index&a=show&catid=66&id=274",
     "datasheetNote": "",
     "remark": "主推品，CAN SIC芯片"
@@ -2304,7 +2304,7 @@ export const chipRecords = [
     "model": "HCLD801L",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cqEPhQ0br1OL",
     "datasheetNote": "",
     "remark": "4x45W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2314,7 +2314,7 @@ export const chipRecords = [
     "model": "HCLD801A",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cakexRZ6zqIf",
     "datasheetNote": "",
     "remark": "4x75W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2324,7 +2324,7 @@ export const chipRecords = [
     "model": "CLD8684",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cn7FylAVsLwx",
     "datasheetNote": "",
     "remark": "42V 4通道D类音频放大器，带电流检测和实时负载诊断"
@@ -2334,7 +2334,7 @@ export const chipRecords = [
     "model": "CLD8424RA",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cpYFoIeSBMAp",
     "datasheetNote": "",
     "remark": "4x75W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2344,7 +2344,7 @@ export const chipRecords = [
     "model": "CLD8424R",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cpYFoIeSBMAp",
     "datasheetNote": "",
     "remark": "4通道D类音频放大器，汽车级应用"
@@ -2354,7 +2354,7 @@ export const chipRecords = [
     "model": "CLD8422L",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cldqqH5mCcSI",
     "datasheetNote": "",
     "remark": "2x45W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2364,7 +2364,7 @@ export const chipRecords = [
     "model": "CLD8421L",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cgkdfWZTB88P",
     "datasheetNote": "",
     "remark": "1x45W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2374,7 +2374,7 @@ export const chipRecords = [
     "model": "CLD801S",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cpnukk0VYPai",
     "datasheetNote": "",
     "remark": "4x75W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2384,7 +2384,7 @@ export const chipRecords = [
     "model": "CLD801",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/ciaPmXHwhqUD",
     "datasheetNote": "",
     "remark": "4x75W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2394,7 +2394,7 @@ export const chipRecords = [
     "model": "CLA54x1x系列",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cizJj9MoZ5Ra",
     "datasheetNote": "",
     "remark": "单声道D类音频放大器系列，功率8W-22W，汽车级应用"
@@ -2404,7 +2404,7 @@ export const chipRecords = [
     "model": "CLD8424LA",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/chjp7gdMyFyb",
     "datasheetNote": "",
     "remark": "4x45W汽车级D类音频放大器，带负载dump保护和I2C诊断"
@@ -2414,7 +2414,7 @@ export const chipRecords = [
     "model": "CLD8424L",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cq8sFGtQhjQ9",
     "datasheetNote": "",
     "remark": "4通道D类音频放大器，汽车级应用"
@@ -2424,7 +2424,7 @@ export const chipRecords = [
     "model": "CLD8424LC",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cjRftApaj8N5",
     "datasheetNote": "",
     "remark": "4x25W 汽车级 D 类音频放大器，带负载 dump 保护和 I2C 诊断"
@@ -2434,7 +2434,7 @@ export const chipRecords = [
     "model": "CLD8422LC",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cdgLS5zllFXj",
     "datasheetNote": "",
     "remark": "2x25W 汽车级 D 类音频放大器，带负载 dump 保护和 I2C 诊断"
@@ -2444,7 +2444,7 @@ export const chipRecords = [
     "model": "CLD8421LC",
     "manufacturer": "芯聆半导体",
     "primaryCategory": "感知类芯片",
-    "secondaryCategory": "语音芯片 (音频处理､音频收发､音频功放)",
+    "secondaryCategory": "语音芯片",
     "datasheetUrl": "https://www.kdocs.cn/l/cvyOgwqN9Bvf",
     "datasheetNote": "",
     "remark": "1x25W 汽车级 D 类音频放大器，带负载 dump 保护和 I2C 诊断"
@@ -2634,7 +2634,7 @@ export const chipRecords = [
     "model": "Z20K11xMC",
     "manufacturer": "智芯科技",
     "primaryCategory": "控制类芯片",
-    "secondaryCategory": "低端 MCU芯片",
+    "secondaryCategory": "低端MCU芯片",
     "datasheetUrl": "https://www.zhixin-semi.com/uploads/20241206/Z20K11xM_Datasheet_RTM1.9.pdf.pdf",
     "datasheetNote": "",
     "remark": "基于ARM CORTEX M0+的中低端微控制器"
@@ -2644,7 +2644,7 @@ export const chipRecords = [
     "model": "Z20K14xMC",
     "manufacturer": "智芯科技",
     "primaryCategory": "控制类芯片",
-    "secondaryCategory": "中端 MCU芯片",
+    "secondaryCategory": "中端MCU芯片",
     "datasheetUrl": "https://www.zhixin-semi.com/uploads/20240126/Z20K14xM_Datasheet_V1.2.pdf.pdf",
     "datasheetNote": "",
     "remark": "基于ARM CORTEX M4F的中高端微控制器"
@@ -2654,7 +2654,7 @@ export const chipRecords = [
     "model": "Z20K11xN",
     "manufacturer": "智芯科技",
     "primaryCategory": "控制类芯片",
-    "secondaryCategory": "低端 MCU芯片",
+    "secondaryCategory": "低端MCU芯片",
     "datasheetUrl": "https://www.zhixin-semi.com/uploads/20260703/Z20K11xN_Datasheet_V1.1.pdf.pdf",
     "datasheetNote": "",
     "remark": "基于ARM CORTEX M0+的中低端微控制器"
@@ -2664,7 +2664,7 @@ export const chipRecords = [
     "model": "Z20K144MS",
     "manufacturer": "智芯科技",
     "primaryCategory": "控制类芯片",
-    "secondaryCategory": "中端 MCU芯片",
+    "secondaryCategory": "中端MCU芯片",
     "datasheetUrl": "https://www.zhixin-semi.com/uploads/20260622/Z20K144MS_Series_Datasheet_V1.2.pdf.pdf",
     "datasheetNote": "",
     "remark": "基于ARM CORTEX M4F的中高端微控制器"
@@ -2674,7 +2674,7 @@ export const chipRecords = [
     "model": "Z20K148MS",
     "manufacturer": "智芯科技",
     "primaryCategory": "控制类芯片",
-    "secondaryCategory": "中端 MCU芯片",
+    "secondaryCategory": "中端MCU芯片",
     "datasheetUrl": "https://www.zhixin-semi.com/uploads/20251222/Z20K148MS_Series_Datasheet_V1.0.pdf.pdf",
     "datasheetNote": "",
     "remark": "基于ARM CORTEX M4F的中高端微控制器"
@@ -3984,7 +3984,7 @@ export const chipRecords = [
     "model": "RLC90107",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Serializer，主推产品，支持1.6Gbps/2Gbps，主要应用于1MP Camera"
@@ -3994,7 +3994,7 @@ export const chipRecords = [
     "model": "RLC90311",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Serializer，主推产品，支持3.2Gbps速率，主要应用于2/3MP Camera"
@@ -4004,7 +4004,7 @@ export const chipRecords = [
     "model": "RLC90605",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Serializer，主推产品，支持6.4Gbps速率，主要应用于8MP Camera"
@@ -4014,7 +4014,7 @@ export const chipRecords = [
     "model": "RLC91201",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Serializer，主推产品，支持12.8Gbps速率，主要应用于17MP Camera"
@@ -4024,7 +4024,7 @@ export const chipRecords = [
     "model": "RLC91601",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Serializer，旗舰产品，支持16Gbps速率（全球首颗16G高速率serdes，仁芯独有），可应用于1颗加串接2颗8M摄像头。"
@@ -4034,7 +4034,7 @@ export const chipRecords = [
     "model": "RLC90610",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，单进单出，可接1x2/3/8MP Camera。"
@@ -4044,7 +4044,7 @@ export const chipRecords = [
     "model": "RLC90606",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，二进二出，可接2x3MP Camera，P2P MAX96716F"
@@ -4054,7 +4054,7 @@ export const chipRecords = [
     "model": "RLC91208",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，二进二出，可接2x8MP Camera"
@@ -4064,7 +4064,7 @@ export const chipRecords = [
     "model": "RLC91210",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，二进二出，可接2x8MP Camera，P2P MAX96718"
@@ -4074,7 +4074,7 @@ export const chipRecords = [
     "model": "RLC92414",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，二进二出，可接2x17MP Camera，P2P MAX96792"
@@ -4084,7 +4084,7 @@ export const chipRecords = [
     "model": "RLC91202",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，四进二出，可接4x3MP Camera，P2P MAX96724F"
@@ -4094,7 +4094,7 @@ export const chipRecords = [
     "model": "RLC92402",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，四进二出，可接4x8MP Camera，P2P MAX96712"
@@ -4104,7 +4104,7 @@ export const chipRecords = [
     "model": "RLC92404",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，四进二出，可接4x8MP Camera，P2P MAX96724"
@@ -4114,7 +4114,7 @@ export const chipRecords = [
     "model": "RLC93804",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，四进二出，可接2*8MP+2*17MP，P2P MAX96712"
@@ -4124,7 +4124,7 @@ export const chipRecords = [
     "model": "RLC91802",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，六进三出，可接6x3MP Camera，仁芯特有六合一解串"
@@ -4134,7 +4134,7 @@ export const chipRecords = [
     "model": "RLC92406",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，六进三出，可接4*3MP+2*8MP，仁芯特有六合一解串"
@@ -4144,7 +4144,7 @@ export const chipRecords = [
     "model": "RLC93602",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，主推产品，六进三出，可接6x8MP Camera，仁芯特有六合一解串"
@@ -4154,7 +4154,7 @@ export const chipRecords = [
     "model": "RLC99602",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "Camera Deserializer，旗舰产品，六进三出，可接6x16MP Camera，仁芯特有六合一解串"
@@ -4164,7 +4164,7 @@ export const chipRecords = [
     "model": "RLDS0801",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DSI-Serializer，主推产品，二进二出，最高4Gbps/lane，典型应用场景2K@60Hz，P2P DS90UB941"
@@ -4174,7 +4174,7 @@ export const chipRecords = [
     "model": "RLDS1201",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DSI-Serializer，主推产品，二进二出，最高6.4Gbps/lane，典型应用场景2K@60Hz*2，P2P MAX96755/MAX96789"
@@ -4184,7 +4184,7 @@ export const chipRecords = [
     "model": "RLDS1203",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DSI-Serializer，主推产品，二进二出，最高6.4Gbps/lane，典型应用场景2K@60Hz*2，P2P DS90UB681"
@@ -4194,7 +4194,7 @@ export const chipRecords = [
     "model": "RLDS2401",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DSI-Serializer，主推产品，二进二出，最高12.8Gbps/lane，典型应用场景3K@60Hz*2，P2P DS90UB981"
@@ -4204,7 +4204,7 @@ export const chipRecords = [
     "model": "RLDL1202",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "OLDI-Deserializer，主推产品，二进二出，最高6.4Gbps/lane，典型应用场景3K@60Hz，P2P MAX96752"
@@ -4214,7 +4214,7 @@ export const chipRecords = [
     "model": "RLDL2402",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "OLDI-Deserializer，主推产品，二进二出，最高12.8Gbps/lane，典型应用场景4K@60Hz，P2P MAX96878/MAX96880"
@@ -4224,7 +4224,7 @@ export const chipRecords = [
     "model": "RLDL2404",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "OLDI-Deserializer，主推产品，二进二出，最高12.8Gbps/lane，典型应用场景4K@60Hz，P2P DS90UB988"
@@ -4234,7 +4234,7 @@ export const chipRecords = [
     "model": "RLDL2406",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "OLDI-Deserializer，主推产品，二进二出，最高12.8Gbps/lane，典型应用场景4K@60Hz，P2P MAX96870"
@@ -4244,7 +4244,7 @@ export const chipRecords = [
     "model": "RLDD1201",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Serializerr，主推产品，一进二出，最高6.4Gbps/lane，典型场景2K60Hz*2，P2P MAX96745/MAX96749/MAX96781"
@@ -4254,7 +4254,7 @@ export const chipRecords = [
     "model": "RLDD1601",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Serializerr，主推产品，一进二出，最高8Gbps/lane，典型场景3K60Hz or 2K60Hz*2，P2P DS90UB943"
@@ -4264,7 +4264,7 @@ export const chipRecords = [
     "model": "RLDD2401",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Serializerr，主推产品，一进二出，最高12.8Gbps/lane，典型场景4K60Hz，P2P MAX96851/MAX96853/MAX96855"
@@ -4274,7 +4274,7 @@ export const chipRecords = [
     "model": "RLDD3201",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Serializerr，旗舰产品，一进四出，最高16Gbps/lane，典型场景4K120Hz/8K30Hz，仁芯独有一拖四产品"
@@ -4284,7 +4284,7 @@ export const chipRecords = [
     "model": "RLDD1202",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Deserializer，主推产品，二进一出，最高6.4Gbps/lane，典型场景3K@60Hz，P2P MAX96772"
@@ -4294,7 +4294,7 @@ export const chipRecords = [
     "model": "RLDD1604",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Deserializer，主推产品，二进一出，最高8Gbps/lane，典型场景3K@60Hz，P2P DS90UB944"
@@ -4304,7 +4304,7 @@ export const chipRecords = [
     "model": "RLDD2402",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Deserializer，主推产品，二进一出，最高12.8Gbps/lane，典型场景4K@60Hz，P2P MAX96860"
@@ -4314,7 +4314,7 @@ export const chipRecords = [
     "model": "RLDD3202",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Deserializer，旗舰产品，二进一出，最高16Gbps/lane，典型场景4K120Hz/8K30Hz，仁芯独有32G高速率产品"
@@ -4324,7 +4324,7 @@ export const chipRecords = [
     "model": "REDD1602",
     "manufacturer": "仁芯科技",
     "primaryCategory": "通信类芯片",
-    "secondaryCategory": "serdes芯片",
+    "secondaryCategory": "Serdes芯片",
     "datasheetUrl": "https://r-semi.com/index.php?c=category&id=6",
     "datasheetNote": "",
     "remark": "DP-Retimer，旗舰产品，一进一出，典型场景4K@60Hz with DSC"
@@ -4458,5 +4458,1295 @@ export const chipRecords = [
     "datasheetUrl": "",
     "datasheetNote": "本地PDF缺失: A2000N.pdf",
     "remark": "200TOPS，TSMC 7nm，ASIL-B"
+  },
+  {
+    "id": "chip-soc-a7870-447",
+    "model": "A7870",
+    "manufacturer": "紫光展锐（上海）科技股份有限公司",
+    "primaryCategory": "计算类芯片",
+    "secondaryCategory": "SOC芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta8s3-448",
+    "model": "TTA8S3",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta8s2-449",
+    "model": "TTA8S2",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta8s2x-450",
+    "model": "TTA8S2X",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta8t8x-451",
+    "model": "TTA8T8X",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta9s2x-452",
+    "model": "TTA9S2X",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-tta9s2-453",
+    "model": "TTA9S2",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-ttm20-454",
+    "model": "TTM20",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "安全/监测芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-ttm2000-455",
+    "model": "TTM2000",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "安全/监测芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-ttmu3h-456",
+    "model": "TTMU3H",
+    "manufacturer": "上海芯钛信息科技有限公司",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "安全/监测芯片",
+    "datasheetUrl": "http://www.think-tech.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-sbc-he9788n-457",
+    "model": "HE9788N",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9788N.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "动力总成：4缸引擎控制U-CHIP芯片（全国产化版本）\n工作电压范围：4.8V~28V\n最大耐压：40V\n工作温度：-40℃~125℃\n功能安全：ASIL-D\nCAN FD接口带唤醒；\nK-Line/LIN接口；\nMSC 微秒级接口通信，\n支持SPI通信；"
+  },
+  {
+    "id": "chip-sbc-he9788da-458",
+    "model": "HE9788DA",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9788DA.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "动力总成：4缸引擎控制U-CHIP芯片\n工作电压范围：4.8V~28V\n最大耐压：40V\n工作温度：-40℃~125℃\n功能安全：ASIL-D\nCAN FD接口带唤醒；\nK-Line/LIN接口；\nMSC 微秒级接口通信，\n支持SPI通信；"
+  },
+  {
+    "id": "chip-chip-he8116-459",
+    "model": "HE8116",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "预驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE8116.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "主推产品\n1、用于三相无刷直流电机控制的栅极驱动芯片，驱动6个N-MOSFET，可配置为三个独立半桥，具备多种参数调节和控制功能，支持12V/24V系统。\n2、工作温度：-40°C ~ 150°C(AEC-Q100 Grade0)\n3、宽工作电压范围： 5.5V to 60V\n4、EPS 电子助力转向\nEHB 电子液压制动\nEMB 电子机械制动\nASU 主动悬架//真空泵\nTMC 热管理控制器"
+  },
+  {
+    "id": "chip-ldo-he4264-460",
+    "model": "HE4264",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "LDO芯片",
+    "datasheetUrl": "/data/chip_pdf/HE4264.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "工作电压范围：4V~45V\n工作温度：-40℃~125℃\n200mA电流能力\n输出电压精度在 +/- 2%\n输入电压范围宽：4V ≤ VIN ≤ 40V\n具有限流输出和过温保护功能"
+  },
+  {
+    "id": "chip-pmic-he9286-461",
+    "model": "HE9286",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "PMIC芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9286.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "1、工作电压范围：6.0V~38.5V\n(升压调节器工作情况下，最低工作电压可低至3V)\n2、工作温度：-40℃~150℃ ， (AEC-Q100 Grade0)\n3、功能安全：ASIL-D\n4、Buck 分压电路能力5.8V/ 1.8A"
+  },
+  {
+    "id": "chip-ldo-he115-462",
+    "model": "HE115",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "LDO芯片",
+    "datasheetUrl": "/data/chip_pdf/HE115.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "150mA电流能力\n跟踪精度，+/- 5mV\n工作电压范围：4V~45V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-sbc-he0400-463",
+    "model": "HE0400",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/HE0400.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "工作电压范围：6V~20V\n最大耐压：40V\n工作温度：-40℃~125℃\nASIL-D\n4路PWM阀驱动，最大输出电流为5A\nSPI通讯总线\nK-line（OBD诊断）\n2路轮速传感器接口WSSI（兼容4种轮速传感器协议）"
+  },
+  {
+    "id": "chip-chip-he99md90xx-464",
+    "model": "HE99MD90xx",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "桥驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE99MD90xx.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "6/8/10/12路半桥驱动，全国产化工艺\n工作电压：4.5V - 32V\n35V dc, 40V@400ms ABS电压\n单路最大输出电流：每个输出具有 1A RMS 电流\n并联输出具有 6A 最大电流(瞬态)\nRds(on) = 0.75 Ω (Typ)"
+  },
+  {
+    "id": "chip-chip-he99md9008-465",
+    "model": "HE99MD9008",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "桥驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE99MD9008.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "8路半桥驱动\n工作电压：4.5V - 32V\n35V dc, 40V@400ms ABS电压\n单路最大输出电流：每个输出具有 1A RMS 电流\n并联输出具有 6A 最大电流(瞬态)\nRds(on) = 0.75 Ω (Typ)"
+  },
+  {
+    "id": "chip-ldo-he105-466",
+    "model": "HE105",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "LDO芯片",
+    "datasheetUrl": "/data/chip_pdf/HE105.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "50mA电流能力\n跟踪精度，+/- 10mV\n工作电压范围：4V~45V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-sbc-he8296s-467",
+    "model": "HE8296S",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/HE8296S.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "工作电压范围：4.5~20V\n最大耐压：40V\n工作温度：-40℃~135℃\n功能安全：ASIL-D\n4路轮速传感器接口WSSI\n4路供电，3路独立集成线性稳压器"
+  },
+  {
+    "id": "chip-chip-he9104c-468",
+    "model": "HE9104C",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9104C.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "4通道自保护低边驱动芯片\n可兼容12V/24V系统应用\nRON：150mΩ\n最大过流值：4A\n漏源钳位电压：50V\n工作温度：-40℃~125℃\n过流阈值1~4A 4档可配"
+  },
+  {
+    "id": "chip-chip-he9145-469",
+    "model": "HE9145",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "预驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9145.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "12V/24V 智能诊断的8通道预驱芯片\n VDD电压范围：4.5V~5.5V\n电源电压输入范围：5.5V~60V\n工作温度：-40℃~125℃\n8 通道预驱可驱动：\n• High side (NMOS) \n• Low side (NMOS) \n• H-bridge (最多可形成 2个 H-bridge) \n• Peak & Hold (2路负载，电流控制由uC管理)"
+  },
+  {
+    "id": "chip-chip-hels121-470",
+    "model": "HELS121",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HELS121.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "单通道自保护低边驱动芯片\nRON：120mΩ\n典型限流值：5A\n漏源钳位电压：40V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-chip-hels121d-471",
+    "model": "HELS121D",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HELS121D.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "双通道自保护低边驱动芯片\nRON：120mΩ\n典型限流值：5A\n漏源钳位电压：40V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-chip-hels120-472",
+    "model": "HELS120",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HELS120.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "单通道自保护低边驱动芯片\nRON：120mΩ\n典型限流值：2.67A\n漏源钳位电压：40V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-chip-hels120d-473",
+    "model": "HELS120D",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HELS120D.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "双通道自保护低边驱动芯片\nRON：120mΩ\n典型限流值：2.67A\n漏源钳位电压：40V\n工作温度：-40℃~125℃"
+  },
+  {
+    "id": "chip-chip-he9314-474",
+    "model": "HE9314",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "高/低边驱动芯片",
+    "datasheetUrl": "/data/chip_pdf/HE9314.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "底盘专用14路阀驱动芯片\n工作电压范围：5.5V~20V\n工作温度：-40℃~125℃\n功能安全：ASIL-D\n配置4路CSA"
+  },
+  {
+    "id": "chip-sbc-un67-475",
+    "model": "UN67",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/UN67.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "动力总成：2缸引擎控制SBC芯片\n工作电压范围：6V~18V\n最大工作电压：30V\n工作温度：-40℃~125℃\n5V稳压器，最大电流为300mA\n5V跟随稳压器，最大电流为40mA"
+  },
+  {
+    "id": "chip-sbc-un67c-476",
+    "model": "UN67C",
+    "manufacturer": "广东鸿翼芯",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "SBC系统基础芯片",
+    "datasheetUrl": "/data/chip_pdf/UN67C.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": "动力总成：单缸引擎控制SBC芯片\n工作电压范围：6V~18V\n最大工作电压：30V\n工作温度：-40℃~125℃\n5V稳压器，最大电流为300mA\n5V跟随稳压器，最大电流为40mA"
+  },
+  {
+    "id": "chip-soc-lq560-477",
+    "model": "LQ560",
+    "manufacturer": "深圳市欧冶半导体有限公司",
+    "primaryCategory": "计算类芯片",
+    "secondaryCategory": "SOC芯片",
+    "datasheetUrl": "https://www.oritek.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-gb565-478",
+    "model": "GB565",
+    "manufacturer": "深圳市欧冶半导体有限公司",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "https://www.oritek.com.cn/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-xc2-479",
+    "model": "XC2系列",
+    "manufacturer": "小华半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "http://www.xhsc.com.cn/产品线/汽车电子250915",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-a4ax-480",
+    "model": "A4Ax系列",
+    "manufacturer": "小华半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://www.xhsc.com.cn/产品线/汽车电子250915",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-a4x-481",
+    "model": "A4x系列",
+    "manufacturer": "小华半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://www.xhsc.com.cn/产品线/汽车电子250915",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-k11x-482",
+    "model": "K11x系列",
+    "manufacturer": "小华半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "http://www.xhsc.com.cn/产品线/汽车电子250915",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-a052-483",
+    "model": "A052系列",
+    "manufacturer": "小华半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "http://www.xhsc.com.cn/产品线/汽车电子250915",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-lin-sit1022-484",
+    "model": "SIT1022系列",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN芯片",
+    "datasheetUrl": "http://WWW.SITCORES.COM/LIST-17-1.HTML",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-lin-sit1024-485",
+    "model": "SIT1024系列",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN芯片",
+    "datasheetUrl": "http://WWW.SITCORES.COM/LIST-17-1.HTML",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-lin-sit1027-486",
+    "model": "SIT1027系列",
+    "manufacturer": "芯力特",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "LIN芯片",
+    "datasheetUrl": "http://WWW.SITCORES.COM/LIST-17-1.HTML",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-shq89758qs-487",
+    "model": "SHQ89758QS",
+    "manufacturer": "山海半导体",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "电芯管理芯片",
+    "datasheetUrl": "https://download.sensilicon.com:6443/index.php/s/wjyS3tFqSH5Baki",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-shq89758caqs-488",
+    "model": "SHQ89758CAQS",
+    "manufacturer": "山海半导体",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "电芯管理芯片",
+    "datasheetUrl": "https://download.sensilicon.com:6443/index.php/s/wjyS3tFqSH5Baki",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-shq8900q-489",
+    "model": "SHQ8900Q",
+    "manufacturer": "山海半导体",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "电芯管理芯片",
+    "datasheetUrl": "https://download.sensilicon.com:6443/index.php/s/wjyS3tFqSH5Baki",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-shq8910q-490",
+    "model": "SHQ8910Q",
+    "manufacturer": "山海半导体",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "电芯管理芯片",
+    "datasheetUrl": "https://download.sensilicon.com:6443/index.php/s/wjyS3tFqSH5Baki",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-shq89950qs-491",
+    "model": "SHQ89950QS",
+    "manufacturer": "山海半导体",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "电芯管理芯片",
+    "datasheetUrl": "https://download.sensilicon.com:6443/index.php/s/wjyS3tFqSH5Baki",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a158sf-492",
+    "model": "KF32A158SF",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a138sf-493",
+    "model": "KF32A138SF",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a136sf-494",
+    "model": "KF32A136SF",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a136sc-495",
+    "model": "KF32A136SC",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a158-496",
+    "model": "KF32A158",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a156-497",
+    "model": "KF32A156",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a146-498",
+    "model": "KF32A146",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a136-499",
+    "model": "KF32A136",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a150-500",
+    "model": "KF32A150",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a151-501",
+    "model": "KF32A151",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a152-502",
+    "model": "KF32A152",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a140-503",
+    "model": "KF32A140",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf32a141-504",
+    "model": "KF32A141",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100f-505",
+    "model": "KF8A100F",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100eng-506",
+    "model": "KF8A100ENG",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100etn-507",
+    "model": "KF8A100ETN",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100esd-508",
+    "model": "KF8A100ESD",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100enp-509",
+    "model": "KF8A100ENP",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100dtd-510",
+    "model": "KF8A100DTD",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-kf8a100dsd-511",
+    "model": "KF8A100DSD",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-srt1200sc-512",
+    "model": "SRT1200SC",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "射频芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-smc6008-513",
+    "model": "SMC6008",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "智能功率芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-kf32a626-514",
+    "model": "KF32A626",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "光电传感器芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-asic-smc3101-515",
+    "model": "SMC3101",
+    "manufacturer": "芯旺微",
+    "primaryCategory": "计算类芯片",
+    "secondaryCategory": "ASIC芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66s63-516",
+    "model": "M66S63",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66s66-517",
+    "model": "M66S66",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66s68-518",
+    "model": "M66S68",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66s63l-519",
+    "model": "M66S63L",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d63-520",
+    "model": "M65D63",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d68-521",
+    "model": "M65D68",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d66-522",
+    "model": "M65D66",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q63-523",
+    "model": "M65Q63",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q66-524",
+    "model": "M65Q66",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q68-525",
+    "model": "M65Q68",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q63e-526",
+    "model": "M65Q63E",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q66e-527",
+    "model": "M65Q66E",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65q68e-528",
+    "model": "M65Q68E",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66d26a-529",
+    "model": "M66D26A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66d28a-530",
+    "model": "M66D28A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66d96a-531",
+    "model": "M66D96A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66d98a-532",
+    "model": "M66D98A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66q96-533",
+    "model": "M66Q96",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m66q98-534",
+    "model": "M66Q98",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d98a-535",
+    "model": "M65D98A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d96a-536",
+    "model": "M65D96A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d98ad-537",
+    "model": "M65D98AD",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d58a-538",
+    "model": "M65D58A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d56a-539",
+    "model": "M65D56A",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d56ae-540",
+    "model": "M65D56AE",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d58m-541",
+    "model": "M65D58M",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-serdes-m65d56m-542",
+    "model": "M65D56M",
+    "manufacturer": "锐泰微",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "Serdes芯片",
+    "datasheetUrl": "http://www.meritech-ic.com/",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu6832n1-543",
+    "model": "FU6832N1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "https://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu6866q1-544",
+    "model": "FU6866Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "https://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu6880q1-545",
+    "model": "FU6880Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu6881q1-546",
+    "model": "FU6881Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu7564q1-547",
+    "model": "FU7564Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu7565q1-548",
+    "model": "FU7565Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu6816q1-549",
+    "model": "FU6816Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu7512q1-550",
+    "model": "FU7512Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-fd6288q1-551",
+    "model": "FD6288Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "预驱动芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-fd2064q1-552",
+    "model": "FD2064Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "模拟/电源/驱动类芯片",
+    "secondaryCategory": "预驱动芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-asic-ft8215q1-553",
+    "model": "FT8215Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "计算类芯片",
+    "secondaryCategory": "ASIC芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fu7574q1-554",
+    "model": "FU7574Q1",
+    "manufacturer": "峰岹科技",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "http://fortiortech.com/product/automotive-grade-chip",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-g32a1085-555",
+    "model": "G32A1085系列",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-g32a1445-556",
+    "model": "G32A1445系列",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-g32a221-557",
+    "model": "G32A221",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "感知类芯片",
+    "secondaryCategory": "雷达芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-chip-gaif2042-558",
+    "model": "GAIF2042",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "通信类芯片",
+    "secondaryCategory": "其他通信芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-apm32a003f6u7-559",
+    "model": "APM32A003F6U7",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-apm32a072cbt7-560",
+    "model": "APM32A072CBT7",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "低端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-apm32a103cbt7-561",
+    "model": "APM32A103CBT7",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-apm32a403vgt7-562",
+    "model": "APM32A403VGT7",
+    "manufacturer": "极海半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "中端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-mcu-fuxi2360-563",
+    "model": "FuXi2360",
+    "manufacturer": "二进制半导体",
+    "primaryCategory": "控制类芯片",
+    "secondaryCategory": "高端MCU芯片",
+    "datasheetUrl": "",
+    "datasheetNote": "待芯片原厂补充",
+    "remark": ""
+  },
+  {
+    "id": "chip-ddr-is46lq16256b-564",
+    "model": "IS46LQ16256B",
+    "manufacturer": "芯成",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "DDR芯片",
+    "datasheetUrl": "https://www.issi.com/WW/pdf/43-46LQ16256B.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-ddr-is46lq32256b-565",
+    "model": "IS46LQ32256B",
+    "manufacturer": "芯成",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "DDR芯片",
+    "datasheetUrl": "https://www.issi.com/WW/pdf/43-46LQ32256B.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-ddr-scb11n8g322bf-566",
+    "model": "SCB11N8G322BF",
+    "manufacturer": "紫光国芯",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "DDR芯片",
+    "datasheetUrl": "https://www.unisemicon.com/uploadfile/2026/0424/20260424063458247.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-ddr-cxdb6ccbm-da-a-567",
+    "model": "CXDB6CCBM-DA-A",
+    "manufacturer": "长鑫存储",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "DDR芯片",
+    "datasheetUrl": "/data/chip_pdf/CXDB6CCBM-DA-A.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": ""
+  },
+  {
+    "id": "chip-eeprom-gt24c256b-2udla1-568",
+    "model": "GT24C256B-2UDLA1",
+    "manufacturer": "聚辰",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "EEPROM芯片",
+    "datasheetUrl": "https://www.giantec-semi.com/uploads/20241018/cg/GT24C256B_Auto_A1_DS.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-eeprom-gt24c64e-2gla1-569",
+    "model": "GT24C64E-2GLA1",
+    "manufacturer": "聚辰",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "EEPROM芯片",
+    "datasheetUrl": "https://en.giantec-semi.com/uploads/pdf/241106/cg/GT24C64E_Auto_A1_DS.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-eeprom-gt24c128e-2zla1-570",
+    "model": "GT24C128E-2ZLA1",
+    "manufacturer": "聚辰",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "EEPROM芯片",
+    "datasheetUrl": "https://www.giantec-semi.com/uploads/20241018/cg/GT24C128E_Auto_A1_DS.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-eeprom-gt24c512b-2udla1-571",
+    "model": "GT24C512B-2UDLA1",
+    "manufacturer": "聚辰",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "EEPROM芯片",
+    "datasheetUrl": "https://www.giantec-semi.com/uploads/pdf/241105/cg/GT24C512B_Auto_A1_DS.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-eeprom-gt24c1024h-4udla1-572",
+    "model": "GT24C1024H-4UDLA1",
+    "manufacturer": "聚辰",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "EEPROM芯片",
+    "datasheetUrl": "https://www.giantec-semi.com/uploads/20241018/cg/GT24C1024H_Auto_A1_DS.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-emmc-femdrw016g-88a43-573",
+    "model": "FEMDRW016G-88A43",
+    "manufacturer": "江波龙",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "eMMC芯片",
+    "datasheetUrl": "https://www.semiee.com/file2/cc5392748ed238953bfe95fe0b881819/Source30/Longsys-FEMDRW016G-88A43.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-emmc-fseiasld-32g-574",
+    "model": "FSEIASLD-32G",
+    "manufacturer": "江波龙",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "eMMC芯片",
+    "datasheetUrl": "https://www.semiee.com/file2/aaf035d107fef560694a49f8e1957b88/Source10/FORESEE-FSEIASLD-32G.pdf",
+    "datasheetNote": "",
+    "remark": ""
+  },
+  {
+    "id": "chip-ufs-feudme128g-575",
+    "model": "FEUDME128G",
+    "manufacturer": "江波龙",
+    "primaryCategory": "存储类芯片",
+    "secondaryCategory": "UFS芯片",
+    "datasheetUrl": "/data/chip_pdf/FEUDME128G.pdf",
+    "datasheetNote": "本地PDF",
+    "remark": ""
   }
 ];

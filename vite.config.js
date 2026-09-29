@@ -33,7 +33,7 @@ function serveDataDir() {
       const distDataDir = path.resolve(__dirname, 'dist/data/chip_pdf')
       if (fs.existsSync(DATA_DIR)) {
         fs.mkdirSync(distDataDir, { recursive: true })
-        const pdfFiles = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.pdf'))
+        const pdfFiles = fs.readdirSync(DATA_DIR).filter(f => f.toLowerCase().endsWith('.pdf'))
         for (const file of pdfFiles) {
           fs.copyFileSync(path.join(DATA_DIR, file), path.join(distDataDir, file))
         }

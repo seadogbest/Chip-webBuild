@@ -192,11 +192,39 @@ export const domains = [
     summary: "多屏交互、语音交互与车载连接融合体验。",
     cover: domainInfotainmentCarImage,
     coverHint: "建议放置座舱交互界面图（1200x675）",
-    subsystems: ["汽车 USB-C电源和数据解决方案", "舱内无线充电"],
+    subsystems: ["信息娱乐主机 (IVI)", "汽车 USB-C电源和数据解决方案", "舱内无线充电"],
     functions: ["Multi-screen HMI", "Voice Interaction", "In-vehicle Connectivity"],
     subsystemDetails: {
       "汽车 USB-C电源和数据解决方案": ["汽车 USB 供电 - 主机", "汽车 USB Type-C 供电 （PD）", "USB-C 后座娱乐系统"],
       舱内无线充电: ["全套无线充电系统 (WLC)-集成", "无线充电系统 (WLC)-离散式"]
+    },
+    solutionProviders: {
+      "信息娱乐主机 (IVI)": {
+        name: "芯力特",
+        url: "https://www.sitcores.com/"
+      }
+    },
+    subsystemDiagrams: {
+      "信息娱乐主机 (IVI)": [
+        {
+          id: "ivi-main",
+          svgKey: "ivi",
+          label: "IVI 主机框图",
+          provider: { name: "芯力特", url: "https://www.sitcores.com/" }
+        },
+        {
+          id: "ivi-bluetooth",
+          svgKey: "ivi-bluetooth",
+          label: "蓝牙模块框图",
+          provider: { name: "芯力特", url: "https://www.sitcores.com/" }
+        },
+        {
+          id: "ivi-ai-demo",
+          svgKey: "ivi-ai-demo",
+          label: "蓝牙钥匙主模块框图",
+          provider: { name: "芯力特", url: "https://www.sitcores.com/" }
+        }
+      ]
     }
   },
   {

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="788" height="627" viewBox="0 0 788 627" role="img"
+     aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">蓝牙钥匙主模块可点击矢量框图</title>
+  <desc id="diagram-desc">KL30 电源经保护与稳压后为 MCU、CAN 收发器和蓝牙链路供电。两个绿色 SIT1042 节点可点击并高亮。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#222"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M8,0 L0,4 L8,8 Z" fill="#222"/>
+    </marker>
+    <filter id="selected-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1d4ed8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <style>
+    :root { color-scheme: light; }
+    .wire { fill: none; stroke: #333; stroke-width: 1.35; stroke-linecap: square; stroke-linejoin: miter; }
+    .arrow-end { marker-end: url(#arrow); }
+    .arrow-both { marker-start: url(#arrow-start); marker-end: url(#arrow); }
+    .box { stroke: #555; stroke-width: 1.4; }
+    .box-white { fill: #fff; }
+    .box-gray { fill: #d9d9d9; }
+    .box-orange { fill: #ff861c; }
+    .box-green { fill: #8bd246; }
+    .label { fill: #111827; font: 14px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; text-anchor: middle; dominant-baseline: middle; pointer-events: none; }
+    .small { font-size: 12px; }
+    .signal { fill: #111827; font: 13px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+    .clickable { cursor: pointer; outline: none; }
+    .clickable .node-shape { transition: fill .16s ease, stroke .16s ease, stroke-width .16s ease; }
+    .clickable:hover .node-shape,
+    .clickable:focus .node-shape { stroke: #2563eb; stroke-width: 3; }
+    .clickable.selected .node-shape { fill: #2f80ed; stroke: #1557b0; stroke-width: 3; filter: url(#selected-shadow); }
+    .clickable.selected .label { fill: #fff; }
+    .hit-area { fill: transparent; stroke: none; }
+  </style>
+
+  <!-- Wiring layer -->
+  <g id="wiring">
+    <!-- Input power and protection -->
+    <path class="wire" d="M287.5 105 V124"/>
+    <path class="wire" d="M271 124 H304 L287.5 153 Z"/>
+    <path class="wire" d="M271 154 H304"/>
+    <path class="wire arrow-end" d="M287.5 154 V181"/>
+
+    <!-- 5 V and 3.3 V rails -->
+    <path class="wire arrow-end" d="M340 207 H373"/>
+    <path class="wire arrow-end" d="M236 207 H108 V301"/>
+    <path class="wire arrow-end" d="M425 233 V301"/>
+
+    <!-- Upper CAN channel -->
+    <path class="wire arrow-both" d="M160 327 H236"/>
+    <path class="wire arrow-both" d="M108 353 V413"/>
+
+    <!-- Lower CAN channel -->
+    <path class="wire arrow-both" d="M160 563 H194 V455 H236"/>
+
+    <!-- MCU peripheral links -->
+    <path class="wire arrow-end" d="M288 550 V499"/>
+    <path class="wire arrow-end" d="M417 550 V499"/>
+    <path class="wire arrow-both" d="M459 387 H510"/>
+
+    <!-- Bluetooth and RF links -->
+    <path class="wire arrow-end" d="M562 327 V361"/>
+    <path class="wire arrow-both" d="M562 413 V438"/>
+    <path class="wire arrow-both" d="M614 387 H665"/>
+    <path class="wire arrow-both" d="M717 327 V361"/>
+    <path class="wire arrow-both" d="M717 413 V438"/>
+  </g>
+
+  <!-- Signal labels -->
+  <g id="signal-labels">
+    <text class="signal small" x="173" y="199">5V</text>
+    <text class="signal small" x="436" y="263">3.3V</text>
+    <text class="signal small" x="171" y="322">TXD RXD</text>
+    <text class="signal small" x="117" y="392">CAN</text>
+    <text class="signal small" x="167" y="510">TXD</text>
+    <text class="signal small" x="211" y="510">RXD</text>
+    <text class="signal small" x="465" y="381">GPIO</text>
+  </g>
+
+  <!-- Power input -->
+  <g id="kl30-input">
+    <title>KL30 常电输入</title>
+    <rect class="box box-white" x="236" y="27" width="103" height="52"/>
+    <text class="label" x="287.5" y="53">KL30</text>
+  </g>
+  <g id="input-tvs">
+    <title>电源瞬态抑制保护</title>
+    <rect class="box box-orange" x="236" y="79" width="103" height="26" rx="4"/>
+    <text class="label" x="287.5" y="92">TVS</text>
+  </g>
+
+  <!-- Regulators -->
+  <g id="ldo-5v">
+    <title>5 V 低压差线性稳压器，输出能力不低于 500 mA</title>
+    <rect class="box box-gray" x="236" y="181" width="104" height="52" rx="8"/>
+    <text class="label small" x="288" y="201">LDO 5V</text>
+    <text class="label small" x="288" y="218">≥500mA</text>
+  </g>
+  <g id="ldo-3v3">
+    <title>3.3 V 低压差线性稳压器，输出能力 150 mA</title>
+    <rect class="box box-orange" x="373" y="181" width="104" height="52" rx="8"/>
+    <text class="label small" x="425" y="201">LDO</text>
+    <text class="label small" x="425" y="218">3.3V 150mA</text>
+  </g>
+
+  <!-- Upper CAN path: clickable chip node -->
+  <g id="can-transceiver-sit1042-upper" class="clickable chip-node" role="button" tabindex="0"
+     aria-label="选择上方 CAN 收发器 SIT1042" data-part-number="SIT1042"
+     onclick="toggleNode(evt, this)" onkeydown="activateNode(evt, this)">
+    <title>CAN 收发器 SIT1042。点击切换蓝色高亮。</title>
+    <rect class="box box-green node-shape" x="56" y="301" width="104" height="52" rx="8"/>
+    <rect class="hit-area" x="50" y="295" width="116" height="64"/>
+    <text class="label small" x="108" y="321">CAN收发器</text>
+    <text class="label small" x="108" y="338">SIT1042</text>
+  </g>
+  <g id="can-tvs-upper">
+    <title>上方 CAN 总线 TVS 保护</title>
+    <rect class="box box-orange" x="56" y="353" width="104" height="35" rx="6"/>
+    <text class="label" x="108" y="371">TVS</text>
+  </g>
+  <g id="vehicle-domain-controller">
+    <title>车身域控制器</title>
+    <rect class="box box-white" x="56" y="413" width="104" height="52" rx="8"/>
+    <text class="label" x="108" y="439">车身域控</text>
+  </g>
+
+  <!-- Lower CAN path: clickable chip node -->
+  <g id="can-transceiver-sit1042-lower" class="clickable chip-node" role="button" tabindex="0"
+     aria-label="选择下方 CAN 收发器 SIT1042" data-part-number="SIT1042"
+     onclick="toggleNode(evt, this)" onkeydown="activateNode(evt, this)">
+    <title>CAN 收发器 SIT1042。点击切换蓝色高亮。</title>
+    <rect class="box box-green node-shape" x="56" y="537" width="104" height="52" rx="8"/>
+    <rect class="hit-area" x="50" y="531" width="116" height="64"/>
+    <text class="label small" x="108" y="557">CAN收发器</text>
+    <text class="label small" x="108" y="574">SIT1042</text>
+  </g>
+  <g id="can-tvs-lower">
+    <title>下方 CAN 总线 TVS 保护</title>
+    <rect class="box box-orange" x="56" y="589" width="104" height="34" rx="6"/>
+    <text class="label" x="108" y="606">TVS</text>
+  </g>
+
+  <!-- MCU and local peripherals -->
+  <g id="mcu">
+    <title>主控制器 MCU</title>
+    <rect class="box box-gray" x="236" y="301" width="223" height="198"/>
+    <text class="label" x="347.5" y="400">MCU</text>
+  </g>
+  <g id="rtc">
+    <title>实时时钟 RTC</title>
+    <rect class="box box-gray" x="236" y="550" width="104" height="52" rx="8"/>
+    <text class="label" x="288" y="576">RTC</text>
+  </g>
+  <g id="mcu-crystal">
+    <title>MCU 外部晶振</title>
+    <rect class="box box-gray" x="365" y="550" width="104" height="52" rx="8"/>
+    <text class="label" x="417" y="576">晶振</text>
+  </g>
+
+  <!-- Bluetooth subsystem -->
+  <g id="bluetooth-crystal">
+    <title>蓝牙模块晶振</title>
+    <rect class="box box-gray" x="510" y="275" width="104" height="52" rx="8"/>
+    <text class="label" x="562" y="301">晶振</text>
+  </g>
+  <g id="bluetooth-module">
+    <title>蓝牙通信模块，通过 GPIO 与 MCU 连接</title>
+    <rect class="box box-gray" x="510" y="361" width="104" height="52" rx="8"/>
+    <text class="label" x="562" y="387">蓝牙模块</text>
+  </g>
+  <g id="bluetooth-eeprom">
+    <title>蓝牙模块外接 EEPROM</title>
+    <rect class="box box-gray" x="510" y="438" width="104" height="52" rx="8"/>
+    <text class="label" x="562" y="464">EEPROM</text>
+  </g>
+
+  <!-- RF subsystem -->
+  <g id="antenna">
+    <title>射频天线</title>
+    <rect class="box box-gray" x="665" y="275" width="104" height="52" rx="8"/>
+    <text class="label" x="717" y="301">天线</text>
+  </g>
+  <g id="rf-transceiver">
+    <title>射频收发器</title>
+    <rect class="box box-gray" x="665" y="361" width="104" height="52" rx="8"/>
+    <text class="label" x="717" y="387">射频收发器</text>
+  </g>
+  <g id="rf-crystal">
+    <title>射频收发器晶振</title>
+    <rect class="box box-gray" x="665" y="438" width="104" height="52" rx="8"/>
+    <text class="label" x="717" y="464">晶振</text>
+  </g>
+
+  <script><![CDATA[
+    function toggleNode(event, node) {
+      if (event) event.stopPropagation();
+      node.classList.toggle('selected');
+      node.setAttribute('aria-pressed', node.classList.contains('selected') ? 'true' : 'false');
+    }
+    function activateNode(event, node) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleNode(event, node);
+      }
+    }
+  ]]></script>
+</svg>

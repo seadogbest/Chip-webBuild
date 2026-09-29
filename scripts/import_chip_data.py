@@ -4,7 +4,7 @@ import sys
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT_CANDIDATES = [
@@ -12,6 +12,7 @@ DEFAULT_INPUT_CANDIDATES = [
     ROOT_DIR / "src" / "data" / "chip.xlsx",
 ]
 OUTPUT_PATH = ROOT_DIR / "src" / "data" / "chip-records.generated.js"
+LOCAL_PDF_DIR = ROOT_DIR / "src" / "data" / "chip_pdf"
 XML_NS = {"a": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 REL_NS = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
 
@@ -92,6 +93,20 @@ def slugify(value: str) -> str:
     return normalized.strip("-") or "chip"
 
 
+def find_local_pdf(model: str) -> Optional[str]:
+    """在 chip_pdf 目录中按文件名（忽略大小写）查找型号对应的 PDF，返回磁盘上的真实文件名。
+
+    这样既能匹配 .pdf / .PDF 等扩展名大小写差异，也能兼容型号大小写差异。
+    """
+    if not model or not LOCAL_PDF_DIR.is_dir():
+        return None
+    target = f"{model}.pdf".casefold()
+    for candidate in LOCAL_PDF_DIR.iterdir():
+        if candidate.is_file() and candidate.name.casefold() == target:
+            return candidate.name
+    return None
+
+
 def normalize_datasheet(raw_value: str, model: str = "") -> Tuple[str, str]:
     cleaned = raw_value.strip()
     if re.match(r"^https?://", cleaned, re.IGNORECASE):
@@ -99,12 +114,11 @@ def normalize_datasheet(raw_value: str, model: str = "") -> Tuple[str, str]:
     # 检查是否为本地 PDF 模式（Excel 中备注包含"本地"）
     is_local = "本地" in cleaned
     if is_local and model:
-        pdf_filename = f"{model}.pdf"
-        pdf_path = ROOT_DIR / "src" / "data" / "chip_pdf" / pdf_filename
-        if pdf_path.exists():
-            return f"/data/chip_pdf/{pdf_filename}", "本地PDF"
-        else:
-            return "", f"本地PDF缺失: {pdf_filename}"
+        pdf_name = find_local_pdf(model)
+        if pdf_name:
+            # 使用磁盘上的真实文件名，避免大小写不一致导致 URL 404
+            return f"/data/chip_pdf/{pdf_name}", "本地PDF"
+        return "", f"本地PDF缺失: {model}.pdf"
     if cleaned:
         return "", cleaned
     return "", "待芯片原厂补充"

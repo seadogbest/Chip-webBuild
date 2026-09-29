@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1212" height="805" viewBox="0 0 1212 805" xmlns="http://www.w3.org/2000/svg">
+  <title>信息娱乐系统 IVI 框图 - 全矢量可交互版</title>
+  <desc>全矢量重绘，右侧绿色芯片可点击并显示蓝色高亮。</desc>
+
+  <style>
+    text { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #222; }
+    .title { font-size: 26px; font-weight: 700; }
+    .label { font-size: 14px; }
+    .mid { font-size: 18px; }
+    .small { font-size: 12px; }
+    .block-gray { fill: #d9d9d9; stroke: #666; stroke-width: 2; }
+    .block-white { fill: #efefef; stroke: #666; stroke-width: 2; }
+    .block-orange { fill: #f49a29; stroke: #6b5c44; stroke-width: 2; }
+    .block-green { fill: #9acd4f; stroke: #5a7a29; stroke-width: 2; }
+    .line { stroke: #333; stroke-width: 2; fill: none; }
+    .redline { stroke: #ff4b4b; stroke-width: 2; fill: none; }
+    .bus { fill: #fff; stroke: #666; stroke-width: 2; }
+    .chip .highlight {
+      fill: #d9ebff;
+      stroke: #2f80ed;
+      stroke-width: 3;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .chip:hover .highlight { opacity: 0.6; }
+    .chip.active .highlight { opacity: 1; }
+    .chip .clickbox { fill: #ffffff; fill-opacity: 0.001; cursor: pointer; }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#333"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#ff4b4b"/>
+    </marker>
+  </defs>
+
+
+  <!-- background -->
+  <rect x="0" y="0" width="1212" height="805" fill="#ececec"/>
+  <text x="606" y="30" class="title" text-anchor="middle">信息娱乐系统IVI 框图</text>
+
+  <!-- top supply -->
+  <rect x="463" y="38" width="122" height="57" rx="10" class="block-white"/>
+  <text x="524" y="72" class="mid" text-anchor="middle">KL30</text>
+
+  <rect x="495" y="97" width="90" height="29" rx="5" class="block-orange"/>
+  <text x="540" y="117" class="mid" text-anchor="middle">TVS</text>
+
+  <path d="M524 126 V168" class="line" marker-end="url(#arrow)"/>
+  <path d="M524 138 H421 V166" class="line" marker-end="url(#arrow)"/>
+  <path d="M524 138 H532" class="line"/>
+  <path d="M524 138 H623" class="line" marker-end="url(#arrow)"/>
+
+  <!-- dcdc/lDO blocks -->
+  <rect x="382" y="166" width="80" height="72" rx="12" class="block-gray"/>
+  <text x="422" y="190" class="mid" text-anchor="middle">DCDC 5V</text>
+  <text x="422" y="214" class="mid" text-anchor="middle">TI 61460</text>
+  <text x="422" y="226" class="mid" text-anchor="middle">6A</text>
+
+  <rect x="485" y="166" width="80" height="72" rx="12" class="block-gray"/>
+  <text x="525" y="190" class="mid" text-anchor="middle">DCDC 4V</text>
+  <text x="525" y="214" class="mid" text-anchor="middle">TI 61460</text>
+  <text x="525" y="226" class="mid" text-anchor="middle">6A</text>
+
+  <rect x="611" y="95" width="132" height="73" rx="10" class="block-orange"/>
+  <text x="677" y="136" class="mid" text-anchor="middle">LDO 3.3V 300mA</text>
+  <text x="677" y="156" class="mid" text-anchor="middle">SI14503</text>
+
+  <!-- left peripherals -->
+  <rect x="201" y="328" width="92" height="30" rx="6" class="block-white"/>
+  <text x="247" y="348" class="mid" text-anchor="middle">仪表</text>
+
+  <rect x="201" y="400" width="92" height="39" rx="6" class="block-white"/>
+  <text x="247" y="426" class="mid" text-anchor="middle">功放音频输出</text>
+
+  <rect x="201" y="449" width="92" height="39" rx="6" class="block-white"/>
+  <text x="247" y="475" class="mid" text-anchor="middle">FM/AM</text>
+
+  <rect x="201" y="519" width="92" height="39" rx="6" class="block-white"/>
+  <text x="247" y="545" class="mid" text-anchor="middle">摄像头</text>
+
+  <rect x="201" y="568" width="92" height="29" rx="6" class="block-white"/>
+  <text x="247" y="588" class="mid" text-anchor="middle">SIM</text>
+
+  <rect x="201" y="617" width="92" height="29" rx="6" class="block-white"/>
+  <text x="247" y="637" class="mid" text-anchor="middle">LVDS</text>
+
+  <rect x="201" y="667" width="92" height="31" rx="6" class="block-white"/>
+  <text x="247" y="684" class="mid" text-anchor="middle">USB HUB</text>
+  <text x="247" y="701" class="mid" text-anchor="middle">SPD107</text>
+
+  <rect x="201" y="718" width="92" height="30" rx="6" class="block-white"/>
+  <text x="247" y="738" class="mid" text-anchor="middle">麦克风</text>
+
+  <!-- bottom left screen -->
+  <rect x="32" y="602" width="120" height="60" rx="10" class="block-white"/>
+  <text x="92" y="638" class="mid" text-anchor="middle">中控显示屏</text>
+
+  <!-- DSP -->
+  <rect x="322" y="400" width="89" height="98" rx="15" class="block-gray"/>
+  <text x="366" y="444" class="mid" text-anchor="middle">DSP</text>
+  <text x="366" y="461" class="mid" text-anchor="middle">AK7765VQ</text>
+
+  <!-- SOC -->
+  <rect x="473" y="308" width="91" height="439" rx="14" class="block-gray"/>
+  <text x="518" y="493" class="mid" text-anchor="middle">SOC 模组</text>
+  <text x="518" y="516" class="mid" text-anchor="middle">MT8666</text>
+  <text x="518" y="539" class="mid" text-anchor="middle">(A73*4+A53*4+PMIC+EMMC+wifi+</text>
+  <text x="518" y="562" class="mid" text-anchor="middle">RAM+LTE)</text>
+
+  <!-- MCU -->
+  <rect x="622" y="307" width="303" height="311" class="block-gray"/>
+  <text x="774" y="455" font-size="28" text-anchor="middle">MCU</text>
+  <text x="774" y="482" font-size="24" text-anchor="middle">FS32K146</text>
+
+  <!-- top-right small blocks -->
+  <rect x="738" y="227" width="77" height="28" rx="4" class="block-white"/>
+  <text x="776" y="246" class="mid" text-anchor="middle">EEPROM</text>
+
+  <rect x="835" y="227" width="73" height="28" rx="4" class="block-white"/>
+  <text x="871" y="246" class="mid" text-anchor="middle">加密芯片</text>
+
+  <rect x="1036" y="317" width="90" height="28" rx="8" class="block-white"/>
+  <text x="1081" y="336" class="mid" text-anchor="middle">按键</text>
+
+  <!-- right interface chips -->
+  <g id="can1" class="chip">
+    <rect x="1034" y="372" width="94" height="55" rx="9" class="highlight"/>
+    <rect x="1034" y="372" width="94" height="55" rx="9" class="block-green"/>
+    <text x="1081" y="398" class="mid" text-anchor="middle">CAN 收发器</text>
+    <text x="1081" y="417" class="mid" text-anchor="middle">SIT1042</text>
+    <rect x="1034" y="372" width="94" height="55" rx="9" class="clickbox"/>
+  </g>
+  <rect x="1127" y="372" width="48" height="55" rx="8" class="block-orange"/>
+  <text x="1151" y="404" class="mid" text-anchor="middle">TVS</text>
+
+  <g id="can2" class="chip">
+    <rect x="1034" y="450" width="94" height="55" rx="9" class="highlight"/>
+    <rect x="1034" y="450" width="94" height="55" rx="9" class="block-green"/>
+    <text x="1081" y="476" class="mid" text-anchor="middle">CAN 收发器</text>
+    <text x="1081" y="495" class="mid" text-anchor="middle">SIT1042</text>
+    <rect x="1034" y="450" width="94" height="55" rx="9" class="clickbox"/>
+  </g>
+  <rect x="1127" y="450" width="48" height="55" rx="8" class="block-orange"/>
+  <text x="1151" y="482" class="mid" text-anchor="middle">TVS</text>
+
+  <g id="lin1" class="chip">
+    <rect x="1034" y="530" width="94" height="55" rx="9" class="highlight"/>
+    <rect x="1034" y="530" width="94" height="55" rx="9" class="block-green"/>
+    <text x="1081" y="549" class="mid" text-anchor="middle">LIN 收发器</text>
+    <text x="1081" y="568" class="mid" text-anchor="middle">SIT1021</text>
+    <rect x="1034" y="530" width="94" height="55" rx="9" class="clickbox"/>
+  </g>
+  <rect x="1127" y="530" width="48" height="55" rx="8" class="block-orange"/>
+  <text x="1151" y="562" class="mid" text-anchor="middle">TVS</text>
+
+  <!-- bottom orange -->
+  <path d="M774 618 V675" class="line" marker-end="url(#arrow)"/>
+  <text x="627" y="688" fill="#ff4b4b" font-size="18">12V</text>
+  <path d="M639 692 H641" class="redline"/>
+  <path d="M641 692 H642" class="redline"/>
+  <path d="M624 692 H642" class="redline" marker-end="url(#arrowRed)"/>
+  <rect x="642" y="677" width="90" height="31" rx="7" class="block-orange"/>
+  <text x="687" y="698" class="mid" text-anchor="middle">TPS1H100</text>
+
+  <!-- arrows and labels from supplies to SOC/MCU -->
+  <text x="426" y="278" fill="#ff4b4b" font-size="18">5V</text>
+  <text x="546" y="262" fill="#ff4b4b" font-size="18">4V</text>
+  <text x="671" y="206" fill="#ff4b4b" font-size="18">3.3V</text>
+
+  <path d="M462 257 H496 V307" class="line" marker-end="url(#arrow)"/>
+  <path d="M525 239 V307" class="line" marker-end="url(#arrow)"/>
+  <path d="M672 168 V307" class="line" marker-end="url(#arrow)"/>
+
+  <!-- connections left to soc/dsp -->
+  <path d="M293 343 H472" class="line" marker-end="url(#arrow)"/>
+  <text x="354" y="331" class="mid">MIPI_CSI</text>
+  <path d="M322 420 H293" class="line" marker-end="url(#arrow)"/>
+  <path d="M293 469 H322" class="line" marker-end="url(#arrow)"/>
+  <path d="M412 423 H472" class="line" marker-end="url(#arrow)"/>
+  <path d="M472 447 H412" class="line" marker-end="url(#arrow)"/>
+
+  <path d="M293 533 H472" class="line" marker-end="url(#arrow)"/>
+  <text x="355" y="526" class="mid">MIPI DSI</text>
+
+  <path d="M293 582 H472" class="line" marker-end="url(#arrow)"/>
+  <path d="M293 631 H472" class="line" marker-end="url(#arrow)"/>
+  <text x="375" y="625" class="mid">DPI</text>
+
+  <path d="M293 682 H472" class="line" marker-end="url(#arrow)"/>
+  <text x="375" y="673" class="mid">USB</text>
+
+  <path d="M293 733 H472" class="line" marker-end="url(#arrow)"/>
+
+  <!-- center double arrows -->
+  <polygon points="412,414 433,414 433,403 458,423 433,443 433,432 412,432" class="bus"/>
+  <polygon points="580,517 599,517 599,506 620,528 599,550 599,539 580,539" class="bus"/>
+  <text x="579" y="511" class="mid">SPI</text>
+
+  <!-- soc to screen / screen return -->
+  <path d="M718 708 V777 H83 V670" class="line" marker-end="url(#arrow)"/>
+  <path d="M152 632 H200" class="line" marker-end="url(#arrow)"/>
+
+  <!-- eeprom/encryption -->
+  <path d="M776 255 V307" class="line" marker-end="url(#arrow)"/>
+  <path d="M871 255 V307" class="line" marker-end="url(#arrow)"/>
+  <text x="786" y="284" class="mid">IIC</text>
+
+  <!-- MCU to button -->
+  <path d="M925 331 H1035" class="line" marker-end="url(#arrow)"/>
+  <text x="962" y="322" class="mid">GPIO</text>
+
+  <!-- MCU to right chips -->
+  <path d="M925 399 H1033" class="line" marker-end="url(#arrow)"/>
+  <text x="933" y="391" class="mid">TXD RXD STB</text>
+  <path d="M925 476 H1033" class="line" marker-end="url(#arrow)"/>
+  <text x="933" y="468" class="mid">TXD RXD STB</text>
+  <path d="M925 556 H1033" class="line" marker-end="url(#arrow)"/>
+  <text x="962" y="548" class="mid">TXD RXD</text>
+
+</svg>
