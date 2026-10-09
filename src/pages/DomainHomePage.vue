@@ -20,11 +20,6 @@ const chipCategories = computed(() => getChipCategoryStats());
           <p>
             以整车系统为主线，展示国产芯片在具体功能模块的选型情况。
           </p>
-          <div class="hero-highlights">
-            <span>系统域驱动选型</span>
-            <span>芯片分类入口</span>
-            <span>方案信息聚合</span>
-          </div>
           <div class="hero-actions">
             <RouterLink class="btn primary" to="/chip-category/computing">查看热门芯片分类</RouterLink>
             <a class="btn ghost" href="https://www.infineon.cn/applications/automotive" target="_blank" rel="noreferrer">
@@ -183,24 +178,6 @@ const chipCategories = computed(() => getChipCategoryStats());
   margin: 0;
   color: rgba(226, 232, 240, 0.84);
   max-width: 640px;
-}
-
-.hero-highlights {
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.hero-highlights span {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 8px 12px;
-  border: 1px solid rgba(191, 219, 254, 0.24);
-  background: rgba(15, 23, 42, 0.26);
-  color: #dbeafe;
-  font-size: 13px;
 }
 
 .hero-actions {

@@ -3,7 +3,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue"
 import { RouterLink, useRoute } from "vue-router";
 import { domains } from "../data/domains";
 import { chipRecords } from "../data/chip-records.generated";
-import diagram48vSvg from "../assets/SVG/demo.svg?raw";
+import auxInverterDiagramSvg from "../assets/SVG/demo.svg?raw";
 import iviDiagramSvg from "../assets/SVG/芯力特-IVI框图.svg?raw";
 import bluetoothDiagramSvg from "../assets/SVG/芯力特-蓝牙框图.svg?raw";
 import aiDemoDiagramSvg from "../assets/SVG/ai_demo.svg?raw";
@@ -29,24 +29,22 @@ const selectedSubsystemOptions = computed(() => {
   return activeDomain.value.subsystemDetails?.[selectedSubsystem.value] ?? [];
 });
 const selectedSubsystemDisplay = computed(() => selectedSubsystemDetail.value || selectedSubsystem.value);
-const shouldShow48vDcdcDiagram = computed(
-  () =>
-    activeDomain.value?.key === "domain-48v" &&
-    selectedSubsystem.value === "区域 DC-DC 转换器 48V-12V"
-);
-const activeSubsystemSlides = computed(
-  () => activeDomain.value?.subsystemDiagrams?.[selectedSubsystem.value] ?? []
-);
+// 框图方案统一数据驱动：subsystemDiagrams 中 slide.detail（可选）把框图绑定到三级详情，
+// 未配置 detail 的框图在整个子系统下展示（如座舱域 IVI）
+const activeSubsystemSlides = computed(() => {
+  const slides = activeDomain.value?.subsystemDiagrams?.[selectedSubsystem.value] ?? [];
+  return slides.filter((slide) => !slide.detail || slide.detail === selectedSubsystemDetail.value);
+});
 const shouldShowSubsystemDiagram = computed(() => activeSubsystemSlides.value.length > 0);
 const diagramSvgMap = {
   ivi: iviDiagramSvg,
   "ivi-bluetooth": bluetoothDiagramSvg,
-  "ivi-ai-demo": aiDemoDiagramSvg
+  "ivi-ai-demo": aiDemoDiagramSvg,
+  "aux-inverter": auxInverterDiagramSvg
 };
 const activeSlideIndex = ref(0);
 const activeSlide = computed(() => activeSubsystemSlides.value[activeSlideIndex.value] ?? null);
 const activeSlideSvg = computed(() => diagramSvgMap[activeSlide.value?.svgKey] ?? "");
-const activeSlideProvider = computed(() => activeSlide.value?.provider ?? null);
 
 function prevSubsystemSlide() {
   const count = activeSubsystemSlides.value.length;
@@ -76,15 +74,15 @@ const selectedSubsystemCover = computed(() => {
   }
   return buildSubsystemCover(selectedSubsystemDisplay.value, activeDomain.value.title, selectedSubsystemIndex.value);
 });
+// 方案提供单位与具体框图绑定：只有当前正在展示框图时，才返回该框图自带的提供单位
 const selectedSolutionProvider = computed(() => {
-  if (!activeDomain.value) {
+  if (!shouldShowSubsystemDiagram.value) {
     return null;
   }
-  const providerKey = selectedSubsystemDetail.value || selectedSubsystem.value;
-  const provider = activeDomain.value.solutionProviders?.[providerKey];
-  return provider ?? null;
+  return activeSlide.value?.provider ?? null;
 });
-const diagramNodes = [
+/* ===== 电动汽车辅助逆变器框图（demo.svg）：可点击芯片节点（自带完整芯片清单，不查库） ===== */
+const auxInverterChipNodes = [
   {
     id: "mcu",
     label: "MCU",
@@ -252,11 +250,8 @@ const diagramNodes = [
     ]
   }
 ];
-const selectedChipNodeId = ref(diagramNodes[0].id);
-const selectedChipNode = computed(() => diagramNodes.find((node) => node.id === selectedChipNodeId.value) ?? diagramNodes[0]);
-const selectedNodeChips = computed(() => selectedChipNode.value?.chips ?? []);
-const diagramSvgContainer = ref(null);
-const diagramHotspotSelectorMap = [
+// demo.svg 无语义标注（g.chip 等），按 SVG 坐标选择器定位热点
+const auxInverterHotspotSelectors = [
   {
     id: "pmic",
     label: "电源管理芯片",
@@ -319,17 +314,7 @@ watch(
   { immediate: true }
 );
 
-watch(shouldShow48vDcdcDiagram, (shouldShow) => {
-  if (shouldShow) {
-    selectedChipNodeId.value = diagramNodes[0].id;
-    nextTick(() => {
-      setupSvgHotspots();
-      updateDiagramPanelHeight();
-    });
-  }
-});
-
-/* ===== 信息娱乐系统（IVI）各框图：可点击芯片节点（型号取自 SVG 标注） ===== */
+/* ===== 信息娱乐系统（IVI）各框图：可点击芯片节点（型号取自 SVG 标注，按型号查芯片库） ===== */
 const iviChipNodes = [
   { id: "can1", label: "CAN 收发器（通道 1）", model: "SIT1042" },
   { id: "can2", label: "CAN 收发器（通道 2）", model: "SIT1042" },
@@ -345,14 +330,32 @@ const iviChipNodes = [
   { id: "ai-eeprom", label: "EEPROM", model: "GT25C64A-2GLA1-TR" },
   { id: "ai-secure", label: "车规级安全芯片", model: "JW17051Q20I" }
 ];
-const selectedIviNodeId = ref(iviChipNodes[0].id);
-const selectedIviNode = computed(
-  () => iviChipNodes.find((node) => node.id === selectedIviNodeId.value) ?? iviChipNodes[0]
+/* ===== 统一的框图芯片节点选择：不同框图的节点清单由 svgKey 决定 ===== */
+// 当前框图对应的芯片节点清单
+const activeDiagramChipNodes = computed(() => {
+  if (!shouldShowSubsystemDiagram.value) {
+    return [];
+  }
+  return activeSlide.value?.svgKey === "aux-inverter" ? auxInverterChipNodes : iviChipNodes;
+});
+// 统一的选中节点状态：切换框图时重置
+const selectedNodeId = ref("");
+const activeChipNode = computed(
+  () =>
+    activeDiagramChipNodes.value.find((node) => node.id === selectedNodeId.value) ??
+    activeDiagramChipNodes.value[0]
 );
-const selectedIviChips = computed(() => getIviChipsByModel(selectedIviNode.value.model));
-const iviSvgContainer = ref(null);
+const activeNodeChips = computed(() => {
+  const node = activeChipNode.value;
+  if (!node) {
+    return [];
+  }
+  // 辅助逆变器节点自带完整芯片数据；IVI 节点按型号前缀查芯片库
+  return node.chips?.length ? node.chips : getIviChipsByModel(node.model);
+});
+const diagramStageContainer = ref(null);
 // 当前框图中已绑定交互的芯片节点数量：为 0 时说明该框图没有可点击芯片，无需展示芯片面板
-const iviHotspotCount = ref(0);
+const activeHotspotCount = ref(0);
 
 function getIviChipsByModel(model) {
   const prefix = String(model || "").toUpperCase();
@@ -367,23 +370,20 @@ function getIviChipsByModel(model) {
 }
 
 const activeDiagramPanel = computed(() => {
-  if (shouldShow48vDcdcDiagram.value) {
-    return {
-      title: `${selectedChipNode.value.label} 可选芯片`,
-      chips: selectedNodeChips.value
-    };
+  // 当前框图没有任何可交互芯片节点时（如纯示意图），隐藏芯片面板
+  if (!shouldShowSubsystemDiagram.value || !activeHotspotCount.value) {
+    return null;
   }
-  if (shouldShowSubsystemDiagram.value) {
-    // 当前框图没有任何可交互芯片节点时（如纯示意图），隐藏芯片面板
-    if (!iviHotspotCount.value) {
-      return null;
-    }
-    return {
-      title: `${selectedIviNode.value.label} ${selectedIviNode.value.model} 系列可选芯片`,
-      chips: selectedIviChips.value
-    };
+  const node = activeChipNode.value;
+  if (!node) {
+    return null;
   }
-  return null;
+  return {
+    title: node.model
+      ? `${node.label} ${node.model} 系列可选芯片`
+      : `${node.label} 可选芯片`,
+    chips: activeNodeChips.value
+  };
 });
 
 /* ===== 芯片面板高度：跟随框图 SVG 实际渲染尺寸，超出部分由面板内部滚轮滚动 ===== */
@@ -391,8 +391,7 @@ const diagramPanelMaxHeight = ref(0);
 const chipListRef = ref(null);
 
 function updateDiagramPanelHeight() {
-  const container = shouldShow48vDcdcDiagram.value ? diagramSvgContainer.value : iviSvgContainer.value;
-  const svg = container?.querySelector("svg");
+  const svg = diagramStageContainer.value?.querySelector("svg");
   diagramPanelMaxHeight.value = svg ? Math.round(svg.getBoundingClientRect().height) : 0;
 }
 
@@ -430,25 +429,31 @@ watch(selectedSubsystem, () => {
   activeSlideIndex.value = 0;
 });
 
+// 详情切换后可展示的框图数量可能变少，索引越界时回到第一张
+watch(activeSubsystemSlides, (slides) => {
+  if (activeSlideIndex.value >= slides.length) {
+    activeSlideIndex.value = 0;
+  }
+});
+
 watch([shouldShowSubsystemDiagram, activeSlide], ([shouldShow, slide]) => {
   if (!shouldShow || !slide) {
+    activeHotspotCount.value = 0;
     return;
   }
-  selectedIviNodeId.value = iviChipNodes[0].id;
+  selectedNodeId.value = activeDiagramChipNodes.value[0]?.id ?? "";
   nextTick(() => {
-    setupIviSvgInteraction();
+    setupActiveDiagramInteraction();
     updateDiagramPanelHeight();
   });
 });
 
 function setupIviSvgInteraction() {
-  const container = iviSvgContainer.value;
-  const svgRoot = container?.querySelector("svg");
+  const svgRoot = diagramStageContainer.value?.querySelector("svg");
   if (!svgRoot) {
-    return;
+    return [];
   }
   svgRoot.classList.add("diagram-svg");
-  let hotspotCount = 0;
   const hotspotIds = [];
   // 形态一：g.chip（IVI 主机框图），模型号写在组内文本里，点击区域为 .clickbox
   for (const group of svgRoot.querySelectorAll("g.chip")) {
@@ -465,11 +470,10 @@ function setupIviSvgInteraction() {
       continue;
     }
     clickbox.classList.add("ivi-chip-hotspot");
-    clickbox.dataset.iviNodeId = node.id;
+    clickbox.dataset.nodeId = node.id;
     clickbox.setAttribute("role", "button");
     clickbox.setAttribute("tabindex", "0");
     clickbox.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
-    hotspotCount += 1;
     hotspotIds.push(node.id);
   }
   // 形态二：g.chip-node（蓝牙框图），模型号在 data-part-number 上，组本身就是点击区域
@@ -480,11 +484,10 @@ function setupIviSvgInteraction() {
       continue;
     }
     group.classList.add("ivi-chip-hotspot");
-    group.dataset.iviNodeId = node.id;
+    group.dataset.nodeId = node.id;
     group.setAttribute("role", "button");
     group.setAttribute("tabindex", "0");
     group.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
-    hotspotCount += 1;
     hotspotIds.push(node.id);
   }
   // 形态三：g.clickable（蓝牙钥匙主模块框图），型号写在 data-part-number 上，组本身即点击区域
@@ -498,61 +501,54 @@ function setupIviSvgInteraction() {
     group.removeAttribute("onclick");
     group.removeAttribute("onkeydown");
     group.classList.add("ivi-chip-hotspot");
-    group.dataset.iviNodeId = node.id;
+    group.dataset.nodeId = node.id;
     group.setAttribute("role", "button");
     group.setAttribute("tabindex", "0");
     group.setAttribute("aria-label", `查看 ${node.label} ${node.model} 可选芯片`);
-    hotspotCount += 1;
     hotspotIds.push(node.id);
   }
-  iviHotspotCount.value = hotspotCount;
-  // 当前框图不含默认节点时，自动选中框图内第一个可点击芯片，保证高亮与右侧面板一致
-  if (hotspotIds.length && !hotspotIds.includes(selectedIviNodeId.value)) {
-    selectedIviNodeId.value = hotspotIds[0];
-  }
-  syncIviSelection();
+  return hotspotIds;
 }
 
-function syncIviSelection() {
-  const svgRoot = iviSvgContainer.value?.querySelector("svg");
+// 把当前选中节点同步到框图高亮（仅 IVI 系框图有 selected 样式规则；其他框图为空操作）
+function syncDiagramSelection() {
+  const svgRoot = diagramStageContainer.value?.querySelector("svg");
   if (!svgRoot) {
     return;
   }
   for (const group of svgRoot.querySelectorAll("g.chip")) {
     const clickbox = group.querySelector(".clickbox");
-    group.classList.toggle("selected", clickbox?.dataset.iviNodeId === selectedIviNodeId.value);
+    group.classList.toggle("selected", clickbox?.dataset.nodeId === selectedNodeId.value);
   }
   for (const group of svgRoot.querySelectorAll("g.chip-node")) {
-    group.classList.toggle("selected", group.dataset.iviNodeId === selectedIviNodeId.value);
+    group.classList.toggle("selected", group.dataset.nodeId === selectedNodeId.value);
   }
   for (const group of svgRoot.querySelectorAll("g.clickable[data-part-number]:not(.chip-node)")) {
-    group.classList.toggle("selected", group.dataset.iviNodeId === selectedIviNodeId.value);
+    group.classList.toggle("selected", group.dataset.nodeId === selectedNodeId.value);
   }
 }
 
-function chooseIviNode(nodeId) {
-  selectedIviNodeId.value = nodeId;
-  syncIviSelection();
-}
-
-function handleIviSvgClick(event) {
-  const target = event.target.closest(".ivi-chip-hotspot");
+// 统一的框图点击/键盘交互：两类热点（.diagram-hotspot / .ivi-chip-hotspot）共用
+function handleDiagramClick(event) {
+  const target = event.target.closest(".diagram-hotspot, .ivi-chip-hotspot");
   if (!target) {
     return;
   }
-  chooseIviNode(target.dataset.iviNodeId);
+  selectedNodeId.value = target.dataset.nodeId;
+  syncDiagramSelection();
 }
 
-function handleIviSvgKeyboard(event) {
+function handleDiagramKeydown(event) {
   if (event.key !== "Enter" && event.key !== " ") {
     return;
   }
-  const target = event.target.closest(".ivi-chip-hotspot");
+  const target = event.target.closest(".diagram-hotspot, .ivi-chip-hotspot");
   if (!target) {
     return;
   }
   event.preventDefault();
-  chooseIviNode(target.dataset.iviNodeId);
+  selectedNodeId.value = target.dataset.nodeId;
+  syncDiagramSelection();
 }
 
 function chooseSubsystem(subsystem) {
@@ -597,26 +593,17 @@ function escapeXml(value) {
   return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
-function chooseChipNode(nodeId) {
-  selectedChipNodeId.value = nodeId;
-}
-
-function setupSvgHotspots() {
-  const container = diagramSvgContainer.value;
-  if (!container) {
-    return;
-  }
-  const svgRoot = container.querySelector("svg");
+// 辅助逆变器框图（demo.svg）：按坐标选择器绑定热点
+function setupAuxInverterHotspots() {
+  const svgRoot = diagramStageContainer.value?.querySelector("svg");
   if (!svgRoot) {
-    return;
+    return [];
   }
   svgRoot.classList.add("diagram-svg");
-  const hotspotSet = new Set();
-  for (const config of diagramHotspotSelectorMap) {
+  const hotspotIds = [];
+  for (const config of auxInverterHotspotSelectors) {
     for (const selector of config.selectors) {
-      const nodes = svgRoot.querySelectorAll(selector);
-      for (const node of nodes) {
-        hotspotSet.add(node);
+      for (const node of svgRoot.querySelectorAll(selector)) {
         node.classList.add("diagram-hotspot");
         node.dataset.nodeId = config.id;
         node.setAttribute("role", "button");
@@ -624,45 +611,29 @@ function setupSvgHotspots() {
         node.setAttribute("aria-label", `查看 ${config.label} 可选芯片`);
       }
     }
+    hotspotIds.push(config.id);
   }
-  for (const node of svgRoot.querySelectorAll(".diagram-hotspot")) {
-    if (!hotspotSet.has(node)) {
-      node.classList.remove("diagram-hotspot");
-      node.removeAttribute("data-node-id");
-      node.removeAttribute("role");
-      node.removeAttribute("tabindex");
-      node.removeAttribute("aria-label");
-    }
-  }
+  return hotspotIds;
 }
 
-function handleSvgClick(event) {
-  const target = event.target.closest(".diagram-hotspot");
-  if (!target) {
-    return;
+// 统一的框图交互入口：按当前框图的 svgKey 选择热点绑定方式
+function setupActiveDiagramInteraction() {
+  const hotspotIds =
+    activeSlide.value?.svgKey === "aux-inverter"
+      ? setupAuxInverterHotspots()
+      : setupIviSvgInteraction();
+  activeHotspotCount.value = hotspotIds.length;
+  // 当前框图不含默认节点时，自动选中框图内第一个可点击芯片，保证高亮与右侧面板一致
+  if (hotspotIds.length && !hotspotIds.includes(selectedNodeId.value)) {
+    selectedNodeId.value = hotspotIds[0];
   }
-  chooseChipNode(target.dataset.nodeId);
-}
-
-function handleSvgKeyboard(event) {
-  if (event.key !== "Enter" && event.key !== " ") {
-    return;
-  }
-  const target = event.target.closest(".diagram-hotspot");
-  if (!target) {
-    return;
-  }
-  event.preventDefault();
-  chooseChipNode(target.dataset.nodeId);
+  syncDiagramSelection();
 }
 
 onMounted(() => {
-  if (shouldShow48vDcdcDiagram.value) {
-    setupSvgHotspots();
-  }
   if (shouldShowSubsystemDiagram.value) {
     nextTick(() => {
-      setupIviSvgInteraction();
+      setupActiveDiagramInteraction();
     });
   }
   nextTick(() => {
@@ -673,26 +644,17 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", updateDiagramPanelHeight);
-  const container = diagramSvgContainer.value;
-  if (container) {
-    container.querySelectorAll(".diagram-hotspot").forEach((hotspot) => {
-      hotspot.classList.remove("diagram-hotspot");
-      hotspot.removeAttribute("data-node-id");
-      hotspot.removeAttribute("role");
-      hotspot.removeAttribute("tabindex");
-      hotspot.removeAttribute("aria-label");
-    });
+  const svgRoot = diagramStageContainer.value?.querySelector("svg");
+  if (!svgRoot) {
+    return;
   }
-  const iviRoot = iviSvgContainer.value?.querySelector("svg");
-  if (iviRoot) {
-    iviRoot.querySelectorAll(".ivi-chip-hotspot").forEach((hotspot) => {
-      hotspot.classList.remove("ivi-chip-hotspot");
-      hotspot.removeAttribute("data-ivi-node-id");
-      hotspot.removeAttribute("role");
-      hotspot.removeAttribute("tabindex");
-      hotspot.removeAttribute("aria-label");
-    });
-  }
+  svgRoot.querySelectorAll(".diagram-hotspot, .ivi-chip-hotspot").forEach((hotspot) => {
+    hotspot.classList.remove("diagram-hotspot", "ivi-chip-hotspot");
+    hotspot.removeAttribute("data-node-id");
+    hotspot.removeAttribute("role");
+    hotspot.removeAttribute("tabindex");
+    hotspot.removeAttribute("aria-label");
+  });
 });
 
 function getSourceDomain(url) {
@@ -719,29 +681,19 @@ function getSourceDomain(url) {
         <RouterLink to="/" class="btn ghost">返回 Domain 首页</RouterLink>
       </div>
 
-      <div v-if="!shouldShow48vDcdcDiagram && !shouldShowSubsystemDiagram" class="domain-cover">
+      <div v-if="!shouldShowSubsystemDiagram" class="domain-cover">
         <img :src="selectedSubsystemCover" :alt="selectedSubsystem" class="cover-image" />
         <div class="cover-caption">{{ selectedSubsystemDisplay }}</div>
       </div>
       <section v-else class="diagram-panel">
-        <div
-          v-if="shouldShow48vDcdcDiagram"
-          ref="diagramSvgContainer"
-          class="diagram-canvas diagram-svg-container"
-          aria-label="48V 轻混系统框图"
-          v-html="diagram48vSvg"
-          @click="handleSvgClick"
-          @keydown="handleSvgKeyboard"
-        >
-        </div>
-        <div v-else class="diagram-stage">
+        <div class="diagram-stage">
           <div
-            ref="iviSvgContainer"
-            class="diagram-canvas diagram-svg-container ivi-diagram-container"
-            :aria-label="activeSlide ? `信息娱乐系统 ${activeSlide.label}` : '信息娱乐系统框图'"
+            ref="diagramStageContainer"
+            class="diagram-canvas diagram-svg-container"
+            :aria-label="activeSlide ? activeSlide.label : '系统框图'"
             v-html="activeSlideSvg"
-            @click="handleIviSvgClick"
-            @keydown="handleIviSvgKeyboard"
+            @click="handleDiagramClick"
+            @keydown="handleDiagramKeydown"
           >
           </div>
           <template v-if="activeSubsystemSlides.length > 1">
@@ -759,7 +711,7 @@ function getSourceDomain(url) {
             >›</button>
           </template>
           <div v-if="activeSlide" class="diagram-slide-caption">
-            {{ activeSlideIndex + 1 }} / {{ activeSubsystemSlides.length }} · {{ activeSlide.label }}
+            {{ activeSubsystemSlides.length > 1 ? `${activeSlideIndex + 1} / ${activeSubsystemSlides.length} · ` : "" }}{{ activeSlide.label }}
           </div>
         </div>
         <aside
@@ -834,10 +786,10 @@ function getSourceDomain(url) {
           </div>
           <p v-if="selectedSubsystemDetail" class="detail-current">当前详情：{{ selectedSubsystemDetail }}</p>
           <p v-else class="detail-empty">该子系统暂无对应的详情选项。</p>
-          <div class="provider-block">
+          <div v-if="selectedSolutionProvider" class="provider-block">
             <h3>设计方案提供单位：</h3>
             <a
-              v-if="selectedSolutionProvider?.name && selectedSolutionProvider?.url"
+              v-if="selectedSolutionProvider.url"
               class="provider-card clickable"
               :href="selectedSolutionProvider.url"
               target="_blank"
@@ -852,13 +804,12 @@ function getSourceDomain(url) {
                 <span class="external-icon" aria-hidden="true">↗</span>
               </span>
             </a>
-            <div v-else-if="selectedSolutionProvider?.name" class="provider-card">
+            <div v-else class="provider-card">
               <span class="provider-main">
                 <span class="provider-label">承办企业</span>
                 <span class="provider-name">{{ selectedSolutionProvider.name }}</span>
               </span>
             </div>
-            <div v-else class="provider-card empty"></div>
           </div>
         </article>
       </div>
@@ -1044,17 +995,17 @@ function getSourceDomain(url) {
   outline: none;
 }
 
-.ivi-diagram-container :deep(g.chip .clickbox) {
+.diagram-svg-container :deep(g.chip .clickbox) {
   outline: none;
 }
 
-.ivi-diagram-container :deep(g.chip:hover .block-green),
-.ivi-diagram-container :deep(g.chip:focus-within .block-green) {
+.diagram-svg-container :deep(g.chip:hover .block-green),
+.diagram-svg-container :deep(g.chip:focus-within .block-green) {
   stroke: #2f80ed;
   stroke-width: 3;
 }
 
-.ivi-diagram-container :deep(g.chip.selected .block-green) {
+.diagram-svg-container :deep(g.chip.selected .block-green) {
   stroke: #2f80ed;
   stroke-width: 3.5;
 }
@@ -1316,14 +1267,6 @@ function getSourceDomain(url) {
   padding: 2px 10px;
   font-size: 12px;
   flex-shrink: 0;
-}
-
-.provider-card.empty {
-  min-height: 42px;
-  background: #f8fafc;
-  border-style: dashed;
-  border-color: #cbd5e1;
-  border-left-color: #cbd5e1;
 }
 
 .empty-state {

@@ -1,14 +1,9 @@
 import carHeroImage from "../assets/car.jpg";
-import domain48vCarImage from "../assets/domain-48v-car.jpg";
 import domainadasCarImage from "../assets/domain-adas-car.jpg";
 import domainBodyPowerCarImage from "../assets/domain-bodypower-car.jpg";
-import domainLEDCarImage from "../assets/domain-LED-car.jpg";
 import domainChassisCarImage from "../assets/domain-chassis-car.jpg";
 import domainPowerCarImage from "../assets/domain-power-car.jpg";
-import domainThermalCarImage from "../assets/domain-thermal-car.jpg";
-import domainPowerChainCarImage from "../assets/domain-powertrain-car.jpg";
 import domainInfotainmentCarImage from "../assets/domain-infotainment-car.jpg";
-import domainLightEVCarImage from "../assets/domain-lightev-car.jpg";
 
 export const siteMeta = {
   title: "国产汽车芯片选型指南",
@@ -24,110 +19,22 @@ export const homepageImage = {
 
 export const domains = [
   {
-    key: "domain-48v",
-    title: "用于电动汽车&轻度混合动力汽车的48V系统",
-    summary: "围绕 48V 起发一体、DC-DC 与能量回收构建轻混系统选型入口。",
-    cover: domain48vCarImage,
-    coverHint: "建议放置 16:9 的 48V 系统示意图（1200x675）",
-    subsystems: [
-      "曲轴启动发电机 48V-逆变器 ISG",
-      "区域 DC-DC 转换器 48V-12V",
-      "传动系统启动发电机 48V-逆变器 ISG"
-    ],
-    functions: ["48V Energy Flow", "ISG Control", "Dual DC-DC Management"],
-    subsystemDetails: {},
-    solutionProviders: {
-      "区域 DC-DC 转换器 48V-12V": {
-        name: "金脉电子",
-        url: "http://www.g-pulse.com.cn/#/"
-      }
-    }
-  },
-  {
-    key: "domain-adas",
-    title: "高级驾驶员辅助系统 (ADAS)和自动驾驶(AD)",
-    summary: "感知、域控、座舱融合的智能驾驶场景入口。",
-    cover: domainadasCarImage,
-    coverHint: "建议放置 ADAS 传感器融合图（1200x675）",
-    subsystems: [
-      "汽车雷达系统",
-      "用于 ADAS 和自动驾驶的域控制器",
-      "车内传感应用(ICMS)",
-      "多用途相机",
-      "智能座舱控制器",
-      "L2，L3智能驾驶控制器"
-    ],
-    functions: ["77GHz Radar", "Perception Fusion", "L2/L3 Domain Decision"],
-    subsystemDetails: {
-      汽车雷达系统: ["24 GHz汽车雷达系统", "77 GHz汽车雷达系统"]
-    }
-  },
-  {
-    key: "domain-body-power",
-    title: "汽车车身电子与电力分配",
-    summary: "覆盖车身控制、区域网关与整车配电链路。",
-    cover: domainBodyPowerCarImage,
-    coverHint: "建议放置车身电子拓扑图（1200x675）",
-    subsystems: ["汽车辅助系统", "汽车配电系统", "车身控制模块 (BCM)", "舒适便捷电子产品"],
-    functions: ["Smart Window Control", "Zonal Gateway", "Power Distribution Logic"],
-    subsystemDetails: {
-      汽车辅助系统: ["辅助电机控制-12VDC 电机控制器", "CAV 液压管理系统", "CAV 气动管理系统"],
-      汽车配电系统: ["汽车一次配电单元", "汽车二次配电单元"],
-      "车身控制模块 (BCM)": ["汽车车身控制模块 (BCM)", "带集成网关的车身控制模块 (BCM)"],
-      舒适便捷电子产品: [
-        "去中心化的镜子模块",
-        "门控模块",
-        "带内部和环境光控制功能的车顶控制模块",
-        "座椅舒适度模块",
-        "座椅控制模块",
-        "智能汽车门禁",
-        "智能闭锁系统",
-        "智能车窗升降模块",
-        "挡风玻璃雨刮器系统"
-      ]
-    }
-  },
-  {
-    key: "domain-lighting",
-    title: "汽车 LED 照明系统",
-    summary: "从单灯功能到矩阵大灯，覆盖内外饰照明控制。",
-    cover: domainLEDCarImage,
-    coverHint: "建议放置车灯控制效果图（1200x675）",
-    subsystems: [
-      "汽车动画LED系统",
-      "单灯功能-单通道 LED 驱动器",
-      "汽车LED尾灯功能",
-      "全LED大灯系统-多通道LED驱动器",
-      "LED 驱动器(电动两轮车和三轮车)",
-      "LED 像系灯控制器-供电和通信",
-      "静态室内氛围 LED 灯"
-    ],
-    functions: ["Matrix Headlamp Driver", "Ambient Light Control", "Animated Tail-light"],
-    subsystemDetails: {}
-  },
-  {
-    key: "domain-chassis",
-    title: "底盘控制与安全",
-    summary: "制动、转向、悬架与约束系统的高可靠方案入口。",
-    cover: domainChassisCarImage,
-    coverHint: "建议放置底盘控制结构图（1200x675）",
-    subsystems: ["汽车制动解决方案", "汽车转向解决方案"],
-    functions: ["Electric Power Steering", "Brake-by-Wire", "Safety Trigger Logic"],
-    subsystemDetails: {
-      汽车制动解决方案: ["电动制动助力器", "电动驻车制动器", "机电制动系统(EMB)", "电子稳定控制"],
-      汽车转向解决方案: ["电动助力转向(EPS)", "24v电子助力转向带主动转向", "线控转向"]
-    }
-  },
-  {
-    key: "domain-nev-powertrain",
-    title: "新能源汽车动力系统",
-    summary: "电池、逆变、车载充电和燃料电池传动一体化。",
+    key: "powertrain",
+    title: "动力域 Powertrain",
+    summary: "动力输出、扭矩分配和能源管理，覆盖电机控制、电池管理与充电管理。",
     cover: domainPowerCarImage,
-    coverHint: "建议放置新能源动力链路图（1200x675）",
-    subsystems: ["汽车电池管理系统", "EV 逆变器", "电动汽车电源转换和车载充电器", "燃料电池电动汽车 (FCEV)传动系统"],
-    functions: ["Battery Cell Monitoring", "OBC Control", "EV Inverter Drive"],
+    coverHint: "建议放置 16:9 的动力域系统示意图（1200x675）",
+    subsystems: [
+      "电池管理系统（BMS）",
+      "电机控制器 / 电驱系统",
+      "充电与电源转换",
+      "燃料电池系统（FCEV）",
+      "热管理（泵与风扇）",
+      "整车控制器（VCU）"
+    ],
+    functions: ["Battery Management", "Motor Control", "Charging Management", "Thermal Management"],
     subsystemDetails: {
-      汽车电池管理系统: [
+      "电池管理系统（BMS）": [
         "汽车电池监控和平衡",
         "汽车电池控制单元(BCU)",
         "汽车电池隔离通信",
@@ -140,72 +47,101 @@ export const domains = [
         "汽车电流传感和库仑计量",
         "BMS(两轮车和三轮车)"
       ],
-      "EV 逆变器": [
+      "电机控制器 / 电驱系统": [
         "电动汽车辅助逆变器",
         "适用于建筑、商用和农用车辆的高压辅助应用",
         "电动汽车牵引逆变器",
         "牵引逆变器(商用车)",
         "牵引逆变器(两轮车和三轮车)"
       ],
-      电动汽车电源转换和车载充电器: [
+      "充电与电源转换": [
         "用于电动汽车的高压DC-DC 转换器",
         "高压DC-DC转换器(商用车)",
         "电动汽车充电连接",
         "车载充电(电动商用车)",
         "车载充电(OBC)",
-        "电动两轮车和三轮车的车载充电 (OBC)解决方案"
+        "电动两轮车和三轮车的车载充电 (OBC)解决方案",
+        "区域 DC-DC 转换器 48V-12V"
       ],
-      "燃料电池电动汽车 (FCEV)传动系统": ["燃料电池控制单元(FCCU)", "燃料电池DC-DC升压转换器", "燃料电池电动空气压缩机"]
+      "燃料电池系统（FCEV）": [
+        "燃料电池控制单元(FCCU)",
+        "燃料电池DC-DC升压转换器",
+        "燃料电池电动空气压缩机"
+      ],
+      "热管理（泵与风扇）": ["汽车电动泵和风扇 12V", "汽车电动泵和风扇 48V"]
     },
-    solutionProviders: {
-      电动汽车辅助逆变器: {
-        name: "金脉电子",
-        url: "http://www.g-pulse.com.cn/#/"
-      }
+    // 框图方案统一走 subsystemDiagrams 轮播配置：每张框图自带提供单位（provider）。
+    // detail 字段（可选）用于把框图绑定到具体的三级详情项；不填则在整个子系统下展示。
+    subsystemDiagrams: {
+      "电机控制器 / 电驱系统": [
+        {
+          id: "aux-inverter",
+          svgKey: "aux-inverter",
+          detail: "电动汽车辅助逆变器",
+          label: "电动汽车辅助逆变器框图",
+          provider: {
+            name: "金脉电子",
+            url: "http://www.g-pulse.com.cn/#/"
+          }
+        }
+      ]
     }
   },
   {
-    key: "domain-thermal",
-    title: "电动汽车热管理",
-    summary: "通过压缩机、PTC 与 HVAC 协同提升整车热效率。",
-    cover: domainThermalCarImage,
-    coverHint: "建议放置热管理回路图（1200x675）",
-    subsystems: ["汽车中的泵和风扇"],
-    functions: ["HVAC Thermal Loop", "ITMS Coordination", "PTC Heating Control"],
+    key: "chassis",
+    title: "底盘域 Chassis",
+    summary: "转向、制动、悬架及车辆姿态控制。",
+    cover: domainChassisCarImage,
+    coverHint: "建议放置底盘控制结构图（1200x675）",
+    subsystems: ["转向系统", "制动系统", "悬架系统"],
+    functions: ["Electric Power Steering", "Brake-by-Wire", "Suspension Control"],
     subsystemDetails: {
-      "汽车中的泵和风扇": ["汽车电动泵和风扇 12V", "汽车电动泵和风扇 48V"]
+      转向系统: ["电动助力转向(EPS)", "24v电子助力转向带主动转向", "线控转向"],
+      制动系统: ["电动制动助力器", "电动驻车制动器", "机电制动系统(EMB)", "电子稳定控制"]
     }
   },
   {
-    key: "domain-powertrain",
-    title: "动力总成系统",
-    summary: "发动机与传动系统协同控制的核心链路。",
-    cover: domainPowerChainCarImage,
-    coverHint: "建议放置动力总成示意图（1200x675）",
-    subsystems: ["发动机控制单元", "变速箱控制器", "动力总成能量管理模块"],
-    functions: ["Engine Control", "Shift Strategy", "Powertrain Coordination"],
-    subsystemDetails: {}
+    key: "body",
+    title: "车身域 Body",
+    summary: "车身电器、舒适和便利功能，覆盖 BCM、车门、车窗、灯光、门锁与座椅等。",
+    cover: domainBodyPowerCarImage,
+    coverHint: "建议放置车身电子拓扑图（1200x675）",
+    subsystems: [
+      "车身控制模块（BCM）",
+      "车门与门锁系统",
+      "车窗与车顶系统",
+      "灯光系统",
+      "雨刮与辅助系统",
+      "座椅系统",
+      "汽车配电系统"
+    ],
+    functions: ["Body Control", "Door & Lock", "Lighting Control", "Seat & Comfort", "Power Distribution"],
+    subsystemDetails: {
+      "车身控制模块（BCM）": ["汽车车身控制模块 (BCM)", "带集成网关的车身控制模块 (BCM)"],
+      "车门与门锁系统": ["门控模块", "智能汽车门禁", "智能闭锁系统", "去中心化的镜子模块"],
+      "车窗与车顶系统": ["智能车窗升降模块", "带内部和环境光控制功能的车顶控制模块"],
+      灯光系统: ["LED 驱动器（两轮车和三轮车）"],
+      "雨刮与辅助系统": ["挡风玻璃雨刮器系统", "辅助电机控制-12VDC 电机控制器", "CAV 液压管理系统", "CAV 气动管理系统"],
+      座椅系统: ["座椅控制模块", "座椅舒适度模块"],
+      汽车配电系统: ["汽车一次配电单元", "汽车二次配电单元"]
+    }
   },
   {
-    key: "domain-infotainment",
-    title: "车载信息娱乐系统和人机界面",
-    summary: "多屏交互、语音交互与车载连接融合体验。",
+    key: "cockpit",
+    title: "座舱域 Cockpit",
+    summary: "人机交互、信息显示和娱乐，覆盖中控车机、仪表与无线充电等。",
     cover: domainInfotainmentCarImage,
     coverHint: "建议放置座舱交互界面图（1200x675）",
-    subsystems: ["信息娱乐主机 (IVI)", "汽车 USB-C电源和数据解决方案", "舱内无线充电"],
+    subsystems: ["信息娱乐主机（IVI）", "仪表与显示", "舱内无线充电", "音响与语音交互"],
     functions: ["Multi-screen HMI", "Voice Interaction", "In-vehicle Connectivity"],
     subsystemDetails: {
-      "汽车 USB-C电源和数据解决方案": ["汽车 USB 供电 - 主机", "汽车 USB Type-C 供电 （PD）", "USB-C 后座娱乐系统"],
-      舱内无线充电: ["全套无线充电系统 (WLC)-集成", "无线充电系统 (WLC)-离散式"]
-    },
-    solutionProviders: {
-      "信息娱乐主机 (IVI)": {
-        name: "芯力特",
-        url: "https://www.sitcores.com/"
-      }
+      // 信息娱乐主机（IVI）暂不划分三级可选详情：现有框图（主机/蓝牙/蓝牙钥匙）与 USB 供电等条目无对应关系，
+      // 待有与三级条目一一对应的方案材料后再启用。
+      舱内无线充电: ["全套无线充电系统 (WLC)-集成", "无线充电系统 (WLC)-离散式"],
+      仪表与显示: ["智能仪表盘（两轮车和三轮车）"]
     },
     subsystemDiagrams: {
-      "信息娱乐主机 (IVI)": [
+      "信息娱乐主机（IVI）": [
         {
           id: "ivi-main",
           svgKey: "ivi",
@@ -222,27 +158,21 @@ export const domains = [
           id: "ivi-ai-demo",
           svgKey: "ivi-ai-demo",
           label: "蓝牙钥匙主模块框图",
-          provider: { name: "芯力特", url: "https://www.sitcores.com/" }
+          provider: { name: "东风研发总院", url: "https://www.dfmc.com.cn/index.html" }
         }
       ]
     }
   },
   {
-    key: "domain-light-ev",
-    title: "轻型电动车解决方案",
-    summary: "适配两轮/三轮平台的电驱、充电与照明控制场景。",
-    cover: domainLightEVCarImage,
-    coverHint: "建议放置轻型电动车整车图（1200x675）",
-    subsystems: ["两轮车和三轮车解决方案"],
-    functions: ["Light EV Drive", "Low-voltage BMS", "Lighting Communication"],
+    key: "adas",
+    title: "智能驾驶域 ADAS/AD",
+    summary: "环境感知、驾驶决策和辅助驾驶，覆盖雷达、视觉与域控制。",
+    cover: domainadasCarImage,
+    coverHint: "建议放置 ADAS 传感器融合图（1200x675）",
+    subsystems: ["雷达系统", "摄像头 / 视觉系统", "智能驾驶域控制器"],
+    functions: ["77GHz Radar", "Perception Fusion", "L2/L3 Domain Decision"],
     subsystemDetails: {
-      两轮车和三轮车解决方案: [
-        "BMS （两轮车和三轮BMS）",
-        "LED 驱动器（两轮车和三轮车）",
-        "智能仪表盘（两轮车和三轮车）",
-        "牵引逆变器（两轮车和三轮车）",
-        "车载充电OBC（两轮车和三轮车）"
-      ]
+      雷达系统: ["24 GHz汽车雷达系统", "77 GHz汽车雷达系统"]
     }
   }
 ];
